@@ -54,7 +54,7 @@ namespace FIR_Management_System
             {
                 MessageBox.Show("Login Successful!");
                 dashboard ds = new dashboard();
-                loginPanel lp = new loginPanel();
+                loginPanelPolice lp = new loginPanelPolice();
                 lp.Hide();
                 ds.setRole(role);
                 ds.ShowDialog();

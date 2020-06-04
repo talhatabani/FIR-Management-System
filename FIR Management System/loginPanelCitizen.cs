@@ -16,5 +16,13 @@ namespace FIR_Management_System
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Sign_Up signup = new Sign_Up();
+            this.Hide();
+            signup.ShowDialog();
+            this.Close();
+        }
     }
 }

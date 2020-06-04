@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FIR_Management_System
 {
-    public partial class loginPanel : Form
+    public partial class loginPanelPolice : Form
     {
-        public loginPanel()
+        public loginPanelPolice()
         {
             InitializeComponent();
         }

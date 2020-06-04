@@ -1,6 +1,6 @@
 ﻿namespace FIR_Management_System
 {
-    partial class loginPanel
+    partial class loginPanelPolice
     {
         /// <summary>
         /// Required designer variable.

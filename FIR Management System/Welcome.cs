@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FIR_Management_System.myClasses;
 
 namespace FIR_Management_System
 {
@@ -19,7 +21,7 @@ namespace FIR_Management_System
 
         private void policePortal_Click(object sender, EventArgs e)
         {
-            loginPanel lp = new loginPanel();
+            loginPanelPolice lp = new loginPanelPolice();
             this.Hide();
             lp.ShowDialog();
             this.Close();
