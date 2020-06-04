@@ -36,8 +36,7 @@ namespace FIR_Management_System
             String query = "select Count(uname) from users Where uname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + role + "' AND status = 1";
             SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
             SqlDataAdapter sda = new SqlDataAdapter(sc);
-            sc.Connection = connectionString.getConnection();
-            int count = (int)sc.ExecuteScalar();
+            int count = (int) sc.ExecuteScalar();
             if (count > 0)
             {
                 return true;
@@ -49,7 +48,7 @@ namespace FIR_Management_System
             }
         }
 
-        public void successful(bool status)
+        public void successful(bool status, int role)
         {
             if(status == true)
             {
@@ -57,7 +56,8 @@ namespace FIR_Management_System
                 dashboard ds = new dashboard();
                 loginPanel lp = new loginPanel();
                 lp.Hide();
-                ds.Show();
+                ds.setRole(role);
+                ds.ShowDialog();
                 lp.Close();
             }
 
@@ -76,7 +76,7 @@ namespace FIR_Management_System
         {
             this.role = role;
             bool status = base.loginCheck(userName, password, role);
-            base.successful(status);
+            base.successful(status, role);
         }
     }
 
@@ -88,7 +88,7 @@ namespace FIR_Management_System
         {
             this.role = role;
             bool status = base.loginCheck(userName, password, role);
-            base.successful(status);
+            base.successful(status, role);
         }
     }
 
@@ -100,7 +100,7 @@ namespace FIR_Management_System
         {
             this.role = role;
             bool status = base.loginCheck(userName, password, role);
-            base.successful(status);
+            base.successful(status, role);
         }
     }
 }
