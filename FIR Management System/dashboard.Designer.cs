@@ -38,9 +38,10 @@
             // rolebox
             // 
             this.rolebox.AutoSize = true;
-            this.rolebox.Location = new System.Drawing.Point(12, 29);
+            this.rolebox.Location = new System.Drawing.Point(16, 36);
+            this.rolebox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rolebox.Name = "rolebox";
-            this.rolebox.Size = new System.Drawing.Size(41, 13);
+            this.rolebox.Size = new System.Drawing.Size(53, 17);
             this.rolebox.TabIndex = 0;
             this.rolebox.Text = "Role = ";
             this.rolebox.Visible = false;
@@ -51,10 +52,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(99, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(132, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(158, 26);
+            this.label2.Size = new System.Drawing.Size(201, 34);
             this.label2.TabIndex = 2;
             this.label2.Text = "Login Panel";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -64,19 +64,20 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(94)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(63, 11);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(85, 36);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(368, 66);
+            this.panel2.Size = new System.Drawing.Size(491, 81);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.button1.Location = new System.Drawing.Point(167, 132);
+            this.button1.Location = new System.Drawing.Point(223, 162);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 44);
+            this.button1.Size = new System.Drawing.Size(184, 54);
             this.button1.TabIndex = 5;
             this.button1.Text = "check";
             this.button1.UseVisualStyleBackColor = true;
@@ -84,12 +85,13 @@
             // 
             // dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 337);
+            this.ClientSize = new System.Drawing.Size(665, 415);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.rolebox);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "dashboard";
             this.Text = "dashboard";
             this.Load += new System.EventHandler(this.dashboard_Load);
