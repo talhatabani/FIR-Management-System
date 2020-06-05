@@ -48,6 +48,23 @@ namespace FIR_Management_System
             }
         }
 
+        public bool loginCheck(String email, String pass)
+        {
+            String query = "SELECT COUNT(email) FROM citizens WHERE email = '" + email + "' AND password = '" + pass + "' AND status = 1";
+            SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
+            SqlDataAdapter sda = new SqlDataAdapter(sc);
+            int count = (int)sc.ExecuteScalar();
+            if (count > 0)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
         public void successful(bool status, int role)
         {
             if(status == true)
@@ -59,6 +76,24 @@ namespace FIR_Management_System
                 ds.setRole(role);
                 ds.ShowDialog();
                 lp.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Login Failed!");
+            }
+        }
+
+        public void successful(bool status)
+        {
+            if (status == true)
+            {
+                MessageBox.Show("Login Successful!");
+                //dashboard ds = new dashboard();
+                //loginPanelCitizen lpc = new loginPanelCitizen();
+                //lpc.Hide();
+                //ds.ShowDialog();
+                //lpc.Close();
             }
 
             else
@@ -101,6 +136,15 @@ namespace FIR_Management_System
             this.role = role;
             bool status = base.loginCheck(userName, password, role);
             base.successful(status, role);
+        }
+    }
+
+    public class citizen : users
+    {
+        public citizen(String email, String pass) : base(email, pass)
+        {
+            bool status = base.loginCheck(email, pass);
+            base.successful(status);
         }
     }
 }

@@ -64,17 +64,17 @@
     <Compile Include="FIR List.Designer.cs">
       <DependentUpon>FIR List.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="loginPanel.Designer.cs">
-      <DependentUpon>loginPanel.cs</DependentUpon>
-    </Compile>
     <Compile Include="loginPanelCitizen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="loginPanelCitizen.Designer.cs">
       <DependentUpon>loginPanelCitizen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="loginPanelPolice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loginPanelPolice.Designer.cs">
+      <DependentUpon>loginPanelPolice.cs</DependentUpon>
     </Compile>
     <Compile Include="myClasses\connectionString.cs" />
     <Compile Include="Program.cs" />
@@ -101,11 +101,11 @@
     <EmbeddedResource Include="FIR List.resx">
       <DependentUpon>FIR List.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginPanel.resx">
-      <DependentUpon>loginPanel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="loginPanelCitizen.resx">
       <DependentUpon>loginPanelCitizen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loginPanelPolice.resx">
+      <DependentUpon>loginPanelPolice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

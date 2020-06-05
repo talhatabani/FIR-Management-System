@@ -26,14 +26,16 @@ namespace FIR_Management_System
             sc.CommandType = CommandType.StoredProcedure;
             sc.CommandText = "sp_CitizenInsert";
             sc.Connection = connectionString.getConnection();
-            sc.Parameters.AddWithValue("@PARAM1", selected.Cells[2].Value.ToString());
-            sc.Parameters.AddWithValue("@PARAM2", Convert.ToDecimal(selected.Cells[3].Value));
-            sc.Parameters.AddWithValue("@PARAM3", Convert.ToDecimal(selected.Cells[4].Value));
-            sc.Parameters.AddWithValue("@PARAM_A", Convert.ToInt32(selected.Cells[5].Value));
+            sc.Parameters.AddWithValue("@PARAM1", name.Text);
+            sc.Parameters.AddWithValue("@PARAM2", fname.Text);
+            sc.Parameters.AddWithValue("@PARAM3", Convert.ToInt64(cnic.Text));
+            sc.Parameters.AddWithValue("@PARAM4", email.Text);
+            sc.Parameters.AddWithValue("@PARAM5", Convert.ToInt64(cellno.Text));
+            sc.Parameters.AddWithValue("@PARAM6", password.Text);
             int rows = sc.ExecuteNonQuery();
             if (rows > 0)
             {
-                MessageBox.Show("Information Updated Successfully!");
+                MessageBox.Show("Your Account has been created!");
                 loginPanelCitizen lpc = new loginPanelCitizen();
                 this.Hide();
                 lpc.ShowDialog();

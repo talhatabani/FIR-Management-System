@@ -17,7 +17,12 @@ namespace FIR_Management_System
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            citizen cs = new citizen(emailBox.Text, passwordBox.Text);
+        }
+
+        private void signupBtn_Click(object sender, EventArgs e)
         {
             Sign_Up signup = new Sign_Up();
             this.Hide();
