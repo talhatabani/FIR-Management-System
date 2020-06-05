@@ -14,9 +14,15 @@ namespace FIR_Management_System
 {
     public partial class Sign_Up : Form
     {
+        private int role = 0;
         public Sign_Up()
         {
             InitializeComponent();
+        }
+
+        public void setRole(int role)
+        {
+            this.role = role;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,8 +30,19 @@ namespace FIR_Management_System
             SqlCommand sc = new SqlCommand();
             SqlDataAdapter sda = new SqlDataAdapter(sc);
             sc.CommandType = CommandType.StoredProcedure;
-            sc.CommandText = "sp_CitizenInsert";
             sc.Connection = connectionString.getConnection();
+
+            if (role == 3)
+            {
+                sc.CommandText = "sp_PoliceInsert";
+                sc.Parameters.AddWithValue("@PARAM_ROLE", Convert.ToInt32(roleBox.SelectedIndex) + 1);
+            }
+
+            else
+            {
+                sc.CommandText = "sp_CitizenInsert";
+            }
+
             sc.Parameters.AddWithValue("@PARAM1", name.Text);
             sc.Parameters.AddWithValue("@PARAM2", fname.Text);
             sc.Parameters.AddWithValue("@PARAM3", Convert.ToInt64(cnic.Text));
@@ -35,11 +52,34 @@ namespace FIR_Management_System
             int rows = sc.ExecuteNonQuery();
             if (rows > 0)
             {
-                MessageBox.Show("Your Account has been created!");
-                loginPanelCitizen lpc = new loginPanelCitizen();
-                this.Hide();
-                lpc.ShowDialog();
-                this.Close();
+                if(role == 3)
+                {
+                    MessageBox.Show("Police Office has been added!");
+                    loginPanelPolice lpp = new loginPanelPolice();
+                    this.Hide();
+                    lpp.ShowDialog();
+                    this.Close();
+                }
+
+                else
+                {
+                    MessageBox.Show("Your Account has been created!");
+                    loginPanelCitizen lpc = new loginPanelCitizen();
+                    this.Hide();
+                    lpc.ShowDialog();
+                    this.Close();
+                }
+               
+                
+            }
+        }
+
+        private void Sign_Up_Load(object sender, EventArgs e)
+        {
+            if (role == 3)
+            {
+                roleLabel.Visible = true;
+                roleBox.Visible = true;
             }
         }
     }

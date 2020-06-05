@@ -39,20 +39,43 @@ namespace FIR_Management_System
                 //MessageBox.Show("Comissioner  " +  cs.successful());
             }
         }
+        
+
+        private void role_TextUpdate(object sender, EventArgs e)
+        {
+
+        }
 
         private void role_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (role.Text.Equals("Comissioner"))
             {
-                comissioner cs = new comissioner(username.Text, 3, password.Text);
-                //signupBtn.Enabled = true;            
+                users us = new users(username.Text, password.Text);
+                bool status = us.signupEnabled(username.Text, password.Text);
+                if (status == true)
+                    signupBtn.Enabled = true;
+                else
+                    signupBtn.Enabled = false;           
             }
 
+            else
+            {
+                signupBtn.Enabled = false;
+            }
         }
 
-        private void role_SelectedValueChanged(object sender, EventArgs e)
+        private void loginPanelPolice_Load(object sender, EventArgs e)
         {
-            
+            signupBtn.Enabled = false;
+        }
+
+        private void signupBtn_Click(object sender, EventArgs e)
+        {
+            Sign_Up su = new Sign_Up();
+            su.setRole(3);
+            this.Hide();
+            su.ShowDialog();
+            this.Close();
         }
     }
 }

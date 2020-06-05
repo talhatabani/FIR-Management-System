@@ -62,13 +62,14 @@ namespace FIR_Management_System
             }
         }
 
-        public bool signupEnabled(String name, String pass, int role)
+        //permisssion  granted to the comissioner for adding more officers.//
+        public bool signupEnabled(String name, String pass)
         {
-            String query = "select Count(uname) from users Where uname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + role + "' AND status = 1";
-            SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
-            SqlDataAdapter sda = new SqlDataAdapter(sc);
-            int count = (int)sc.ExecuteScalar();
-            if (count > 0)
+            String query1 = "select Count(uname) from users Where uname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + 3 + "' AND status = 1";
+            SqlCommand sc1 = new SqlCommand(query1, connectionString.getConnection());
+            SqlDataAdapter sda1 = new SqlDataAdapter(sc1);
+            int count1 = (int)sc1.ExecuteScalar();
+            if (count1 > 0)
             {
                 return true;
             }
@@ -76,26 +77,6 @@ namespace FIR_Management_System
             else
             {
                 return false;
-            }
-        }
-        public void signupSuccessful(bool status, int role)
-        {
-            loginPanelPolice lpp = new loginPanelPolice();
-            if (status == true)
-            {
-                //dashboard ds = new dashboard();
-                lpp.signupBtn.Enabled = true;
-                MessageBox.Show("DOne");
-                //lp.Hide();
-                //ds.setRole(role);
-                //ds.ShowDialog();
-                //lp.Close();
-            }
-
-            else
-            {
-                MessageBox.Show("false");
-                lpp.signupBtn.Enabled = false;
             }
         }
 
@@ -123,11 +104,11 @@ namespace FIR_Management_System
             if (status == true)
             {
                 MessageBox.Show("Login Successful!");
-                //dashboard ds = new dashboard();
-                //loginPanelCitizen lpc = new loginPanelCitizen();
-                //lpc.Hide();
-                //ds.ShowDialog();
-                //lpc.Close();
+                dashboard ds = new dashboard();
+                loginPanelCitizen lpc = new loginPanelCitizen();
+                lpc.Hide();
+                ds.ShowDialog();
+                lpc.Close();
             }
 
             else
@@ -170,15 +151,6 @@ namespace FIR_Management_System
             this.role = role;
             bool status = base.loginCheck(userName, password, role);
             base.successful(status, role);
-        }
-
-        //permisssion  granted to the comissioner for adding more officers.//
-        public comissioner(String userName,int role, String password) : base(userName, password)
-        {
-            this.role = role;
-            bool status = base.signupEnabled(userName, password, role);
-            base.signupSuccessful(status, role);
-
         }
     }
 
