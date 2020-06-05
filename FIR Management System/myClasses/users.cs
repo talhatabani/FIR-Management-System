@@ -25,12 +25,7 @@ namespace FIR_Management_System
             return userName;
         }
 
-        //public String successful()
-        //{
-        //    if(loginCheck() == true)
-        //    return ("Login Successful! " + getUserName());
-        //}
-
+        //login for Police Staff by Using the concept of polymorphism//
         public bool loginCheck(String name, String pass, int role)
         {
             String query = "select Count(uname) from users Where uname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + role + "' AND status = 1";
@@ -48,9 +43,11 @@ namespace FIR_Management_System
             }
         }
 
+        //login for Citizen by USing the concept of polymorphism//
+
         public bool loginCheck(String email, String pass)
         {
-            String query = "SELECT COUNT(email) FROM citizens WHERE email = '" + email + "' AND password = '" + pass + "' AND status = 1";
+            String query = "SELECT COUNT(email) FROM citizens WHERE email = '" + email +  "' AND password = '" + pass + "' AND status = 1";
             SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
             SqlDataAdapter sda = new SqlDataAdapter(sc);
             int count = (int)sc.ExecuteScalar();
@@ -62,6 +59,43 @@ namespace FIR_Management_System
             else
             {
                 return false;
+            }
+        }
+
+        public bool signupEnabled(String name, String pass, int role)
+        {
+            String query = "select Count(uname) from users Where uname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + role + "' AND status = 1";
+            SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
+            SqlDataAdapter sda = new SqlDataAdapter(sc);
+            int count = (int)sc.ExecuteScalar();
+            if (count > 0)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+        public void signupSuccessful(bool status, int role)
+        {
+            loginPanelPolice lpp = new loginPanelPolice();
+            if (status == true)
+            {
+                //dashboard ds = new dashboard();
+                lpp.signupBtn.Enabled = true;
+                MessageBox.Show("DOne");
+                //lp.Hide();
+                //ds.setRole(role);
+                //ds.ShowDialog();
+                //lp.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("false");
+                lpp.signupBtn.Enabled = false;
             }
         }
 
@@ -136,6 +170,15 @@ namespace FIR_Management_System
             this.role = role;
             bool status = base.loginCheck(userName, password, role);
             base.successful(status, role);
+        }
+
+        //permisssion  granted to the comissioner for adding more officers.//
+        public comissioner(String userName,int role, String password) : base(userName, password)
+        {
+            this.role = role;
+            bool status = base.signupEnabled(userName, password, role);
+            base.signupSuccessful(status, role);
+
         }
     }
 

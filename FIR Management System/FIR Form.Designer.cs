@@ -74,6 +74,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.loginBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -384,7 +385,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(229, 18);
+            this.label1.Location = new System.Drawing.Point(274, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 41);
             this.label1.TabIndex = 3;
@@ -591,11 +592,28 @@
             this.label15.TabIndex = 24;
             this.label15.Text = "Suspect (if any)";
             // 
+            // loginBtn
+            // 
+            this.loginBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.loginBtn.FlatAppearance.BorderSize = 10;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.loginBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.ForeColor = System.Drawing.Color.Bisque;
+            this.loginBtn.Location = new System.Drawing.Point(259, 718);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(210, 48);
+            this.loginBtn.TabIndex = 12;
+            this.loginBtn.Text = "SUBMIT";
+            this.loginBtn.UseVisualStyleBackColor = false;
+            // 
             // FIR_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 866);
+            this.ClientSize = new System.Drawing.Size(742, 796);
+            this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
@@ -660,5 +678,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button loginBtn;
     }
 }

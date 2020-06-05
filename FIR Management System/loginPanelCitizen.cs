@@ -19,7 +19,12 @@ namespace FIR_Management_System
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            citizen cs = new citizen(emailBox.Text, passwordBox.Text);
+            citizen cs = new citizen(cnicBox.Text, passwordBox.Text);
+
+            FIR_Form fir = new FIR_Form();
+            this.Hide();
+            fir.ShowDialog();
+            this.Close();
         }
 
         private void signupBtn_Click(object sender, EventArgs e)

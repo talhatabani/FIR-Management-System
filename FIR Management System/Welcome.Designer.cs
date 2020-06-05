@@ -40,7 +40,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(94)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(2, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(488, 67);
             this.panel2.TabIndex = 5;
@@ -65,7 +65,7 @@
             this.policePortal.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.policePortal.ForeColor = System.Drawing.Color.White;
             this.policePortal.Location = new System.Drawing.Point(136, 93);
-            this.policePortal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.policePortal.Margin = new System.Windows.Forms.Padding(2);
             this.policePortal.Name = "policePortal";
             this.policePortal.Size = new System.Drawing.Size(228, 71);
             this.policePortal.TabIndex = 6;
@@ -79,7 +79,7 @@
             this.citizenPortal.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.citizenPortal.ForeColor = System.Drawing.Color.White;
             this.citizenPortal.Location = new System.Drawing.Point(136, 180);
-            this.citizenPortal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.citizenPortal.Margin = new System.Windows.Forms.Padding(2);
             this.citizenPortal.Name = "citizenPortal";
             this.citizenPortal.Size = new System.Drawing.Size(228, 71);
             this.citizenPortal.TabIndex = 7;
@@ -91,11 +91,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 275);
+            this.ClientSize = new System.Drawing.Size(491, 333);
             this.Controls.Add(this.citizenPortal);
             this.Controls.Add(this.policePortal);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Welcome";
             this.Text = "Welcome";
             this.panel2.ResumeLayout(false);
