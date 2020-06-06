@@ -45,7 +45,7 @@ namespace FIR_Management_System
 
             sc.Parameters.AddWithValue("@PARAM1", name.Text);
             sc.Parameters.AddWithValue("@PARAM2", fname.Text);
-            sc.Parameters.AddWithValue("@PARAM3", Convert.ToInt64(cnic.Text));
+            sc.Parameters.AddWithValue("@PARAM3", cnic.Text);
             sc.Parameters.AddWithValue("@PARAM4", email.Text);
             sc.Parameters.AddWithValue("@PARAM5", Convert.ToInt64(cellno.Text));
             sc.Parameters.AddWithValue("@PARAM6", password.Text);
@@ -54,7 +54,7 @@ namespace FIR_Management_System
             {
                 if(role == 3)
                 {
-                    MessageBox.Show("Police Office has been added!");
+                    MessageBox.Show("Police Officer has been added!");
                     loginPanelPolice lpp = new loginPanelPolice();
                     this.Hide();
                     lpp.ShowDialog();

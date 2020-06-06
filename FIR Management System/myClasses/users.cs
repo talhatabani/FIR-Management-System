@@ -14,6 +14,11 @@ namespace FIR_Management_System
         private String userName;
         private String password;
 
+        public users()
+        {
+
+        }
+
         public users(String userName, String password)
         {
             this.userName = userName;

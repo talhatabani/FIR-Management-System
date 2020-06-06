@@ -50,7 +50,7 @@ namespace FIR_Management_System
         {
             if (role.Text.Equals("Comissioner"))
             {
-                users us = new users(username.Text, password.Text);
+                users us = new users();
                 bool status = us.signupEnabled(username.Text, password.Text);
                 if (status == true)
                     signupBtn.Enabled = true;
