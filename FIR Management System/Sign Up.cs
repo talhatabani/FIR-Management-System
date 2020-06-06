@@ -25,7 +25,7 @@ namespace FIR_Management_System
             this.role = role;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void signUpBtn_Click(object sender, EventArgs e)
         {
             SqlCommand sc = new SqlCommand();
             SqlDataAdapter sda = new SqlDataAdapter(sc);
