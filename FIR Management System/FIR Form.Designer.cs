@@ -29,52 +29,52 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.lostItems = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.weapon = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.incidentDet = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.location = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.time = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.date = new System.Windows.Forms.DateTimePicker();
+            this.town = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.address = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cellno = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.email = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cnic = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.fname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.witnessAddress = new System.Windows.Forms.TextBox();
+            this.witnessName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.witnessRelation = new System.Windows.Forms.TextBox();
+            this.witness = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.suspectAddress = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.suspectRelation = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.suspectName = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.suspect = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.loginBtn = new System.Windows.Forms.Button();
+            this.submitBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -82,118 +82,128 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox9);
+            this.groupBox1.Controls.Add(this.lostItems);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.weapon);
             this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.incidentDet);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.location);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.time);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.date);
+            this.groupBox1.Controls.Add(this.town);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.address);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.cellno);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.email);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.cnic);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.fname);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.name);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(3, 73);
+            this.groupBox1.Location = new System.Drawing.Point(4, 90);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(722, 418);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(963, 514);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // textBox9
+            // lostItems
             // 
-            this.textBox9.Location = new System.Drawing.Point(384, 290);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(316, 71);
-            this.textBox9.TabIndex = 25;
+            this.lostItems.Location = new System.Drawing.Point(512, 357);
+            this.lostItems.Margin = new System.Windows.Forms.Padding(4);
+            this.lostItems.Multiline = true;
+            this.lostItems.Name = "lostItems";
+            this.lostItems.Size = new System.Drawing.Size(420, 86);
+            this.lostItems.TabIndex = 25;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Cursor = System.Windows.Forms.Cursors.Default;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(383, 266);
+            this.label14.Location = new System.Drawing.Point(511, 327);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(121, 15);
+            this.label14.Size = new System.Drawing.Size(144, 18);
             this.label14.TabIndex = 24;
             this.label14.Text = "Lost Items (if any)";
             // 
-            // comboBox2
+            // weapon
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.weapon.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.weapon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.weapon.FormattingEnabled = true;
+            this.weapon.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox2.Location = new System.Drawing.Point(519, 380);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(99, 21);
-            this.comboBox2.TabIndex = 23;
+            this.weapon.Location = new System.Drawing.Point(692, 468);
+            this.weapon.Margin = new System.Windows.Forms.Padding(4);
+            this.weapon.Name = "weapon";
+            this.weapon.Size = new System.Drawing.Size(131, 25);
+            this.weapon.TabIndex = 23;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Cursor = System.Windows.Forms.Cursors.Default;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(391, 380);
+            this.label12.Location = new System.Drawing.Point(521, 468);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(106, 15);
+            this.label12.Size = new System.Drawing.Size(128, 18);
             this.label12.TabIndex = 22;
             this.label12.Text = "Use Of Weapon";
             // 
-            // textBox8
+            // incidentDet
             // 
-            this.textBox8.Location = new System.Drawing.Point(11, 287);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(343, 125);
-            this.textBox8.TabIndex = 21;
+            this.incidentDet.Location = new System.Drawing.Point(15, 353);
+            this.incidentDet.Margin = new System.Windows.Forms.Padding(4);
+            this.incidentDet.Multiline = true;
+            this.incidentDet.Name = "incidentDet";
+            this.incidentDet.Size = new System.Drawing.Size(456, 153);
+            this.incidentDet.TabIndex = 21;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Cursor = System.Windows.Forms.Cursors.Default;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 264);
+            this.label13.Location = new System.Drawing.Point(16, 325);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 15);
+            this.label13.Size = new System.Drawing.Size(123, 18);
             this.label13.TabIndex = 20;
             this.label13.Text = "Incident Details";
             // 
-            // textBox7
+            // location
             // 
-            this.textBox7.Location = new System.Drawing.Point(178, 226);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(176, 20);
-            this.textBox7.TabIndex = 19;
+            this.location.Location = new System.Drawing.Point(237, 278);
+            this.location.Margin = new System.Windows.Forms.Padding(4);
+            this.location.Multiline = true;
+            this.location.Name = "location";
+            this.location.Size = new System.Drawing.Size(233, 24);
+            this.location.TabIndex = 19;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Cursor = System.Windows.Forms.Cursors.Default;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(175, 202);
+            this.label11.Location = new System.Drawing.Point(233, 249);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 13);
+            this.label11.Size = new System.Drawing.Size(70, 17);
             this.label11.TabIndex = 18;
             this.label11.Text = "Location";
             // 
@@ -202,48 +212,52 @@
             this.label10.AutoSize = true;
             this.label10.Cursor = System.Windows.Forms.Cursors.Default;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(94, 202);
+            this.label10.Location = new System.Drawing.Point(125, 249);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.Size = new System.Drawing.Size(43, 17);
             this.label10.TabIndex = 17;
             this.label10.Text = "Time";
             // 
-            // dateTimePicker2
+            // time
             // 
-            this.dateTimePicker2.CustomFormat = "yyyy-mm-dd";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker2.Location = new System.Drawing.Point(96, 226);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(64, 20);
-            this.dateTimePicker2.TabIndex = 16;
+            this.time.CustomFormat = "yyyy-mm-dd";
+            this.time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.time.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.time.Location = new System.Drawing.Point(128, 278);
+            this.time.Margin = new System.Windows.Forms.Padding(4);
+            this.time.Name = "time";
+            this.time.Size = new System.Drawing.Size(84, 23);
+            this.time.TabIndex = 16;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Cursor = System.Windows.Forms.Cursors.Default;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(12, 202);
+            this.label9.Location = new System.Drawing.Point(16, 249);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.Size = new System.Drawing.Size(42, 17);
             this.label9.TabIndex = 15;
             this.label9.Text = "Date";
             // 
-            // dateTimePicker1
+            // date
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-mm-dd";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(11, 226);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(62, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.date.CustomFormat = "yyyy-mm-dd";
+            this.date.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.date.Location = new System.Drawing.Point(15, 278);
+            this.date.Margin = new System.Windows.Forms.Padding(4);
+            this.date.Name = "date";
+            this.date.Size = new System.Drawing.Size(81, 23);
+            this.date.TabIndex = 14;
             // 
-            // comboBox1
+            // town
             // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.town.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.town.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.town.FormattingEnabled = true;
+            this.town.Items.AddRange(new object[] {
             "Gulshan",
             "Gulistan e Johar ",
             "Liary",
@@ -251,133 +265,147 @@
             "New Town",
             "Bahria Town",
             "Sohrab Goath"});
-            this.comboBox1.Location = new System.Drawing.Point(601, 168);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(99, 21);
-            this.comboBox1.TabIndex = 13;
+            this.town.Location = new System.Drawing.Point(801, 207);
+            this.town.Margin = new System.Windows.Forms.Padding(4);
+            this.town.Name = "town";
+            this.town.Size = new System.Drawing.Size(131, 25);
+            this.town.TabIndex = 13;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Cursor = System.Windows.Forms.Cursors.Default;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(598, 141);
+            this.label8.Location = new System.Drawing.Point(797, 174);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 15);
+            this.label8.Size = new System.Drawing.Size(49, 18);
             this.label8.TabIndex = 12;
             this.label8.Text = "Town";
             // 
-            // textBox6
+            // address
             // 
-            this.textBox6.Location = new System.Drawing.Point(384, 164);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(196, 82);
-            this.textBox6.TabIndex = 11;
+            this.address.Location = new System.Drawing.Point(512, 202);
+            this.address.Margin = new System.Windows.Forms.Padding(4);
+            this.address.Multiline = true;
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(260, 100);
+            this.address.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Cursor = System.Windows.Forms.Cursors.Default;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(381, 141);
+            this.label7.Location = new System.Drawing.Point(508, 174);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 15);
+            this.label7.Size = new System.Drawing.Size(69, 18);
             this.label7.TabIndex = 10;
             this.label7.Text = "Address";
             // 
-            // textBox5
+            // cellno
             // 
-            this.textBox5.Location = new System.Drawing.Point(8, 164);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(305, 25);
-            this.textBox5.TabIndex = 9;
+            this.cellno.Location = new System.Drawing.Point(11, 202);
+            this.cellno.Margin = new System.Windows.Forms.Padding(4);
+            this.cellno.Multiline = true;
+            this.cellno.Name = "cellno";
+            this.cellno.Size = new System.Drawing.Size(405, 30);
+            this.cellno.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.Default;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 141);
+            this.label6.Location = new System.Drawing.Point(11, 174);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 13);
+            this.label6.Size = new System.Drawing.Size(74, 17);
             this.label6.TabIndex = 8;
             this.label6.Text = "CELL NO";
             // 
-            // textBox3
+            // email
             // 
-            this.textBox3.Location = new System.Drawing.Point(381, 104);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(305, 25);
-            this.textBox3.TabIndex = 7;
+            this.email.Location = new System.Drawing.Point(508, 128);
+            this.email.Margin = new System.Windows.Forms.Padding(4);
+            this.email.Multiline = true;
+            this.email.Name = "email";
+            this.email.Size = new System.Drawing.Size(405, 30);
+            this.email.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(380, 79);
+            this.label4.Location = new System.Drawing.Point(507, 97);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(47, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Email";
             // 
-            // textBox4
+            // cnic
             // 
-            this.textBox4.Location = new System.Drawing.Point(9, 104);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(304, 25);
-            this.textBox4.TabIndex = 5;
+            this.cnic.Location = new System.Drawing.Point(12, 128);
+            this.cnic.Margin = new System.Windows.Forms.Padding(4);
+            this.cnic.Multiline = true;
+            this.cnic.Name = "cnic";
+            this.cnic.Size = new System.Drawing.Size(404, 30);
+            this.cnic.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.Default;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(8, 79);
+            this.label5.Location = new System.Drawing.Point(11, 97);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.Size = new System.Drawing.Size(43, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "CNIC";
             // 
-            // textBox2
+            // fname
             // 
-            this.textBox2.Location = new System.Drawing.Point(376, 42);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 25);
-            this.textBox2.TabIndex = 3;
+            this.fname.Location = new System.Drawing.Point(501, 52);
+            this.fname.Margin = new System.Windows.Forms.Padding(4);
+            this.fname.Multiline = true;
+            this.fname.Name = "fname";
+            this.fname.Size = new System.Drawing.Size(405, 30);
+            this.fname.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(373, 17);
+            this.label3.Location = new System.Drawing.Point(497, 21);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 13);
+            this.label3.Size = new System.Drawing.Size(170, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Father/Husband Name";
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 41);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(304, 25);
-            this.textBox1.TabIndex = 1;
+            this.name.Location = new System.Drawing.Point(12, 50);
+            this.name.Margin = new System.Windows.Forms.Padding(4);
+            this.name.Multiline = true;
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(404, 30);
+            this.name.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 16);
+            this.label2.Location = new System.Drawing.Point(11, 20);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(49, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
@@ -385,61 +413,68 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(274, 18);
+            this.label1.Location = new System.Drawing.Point(365, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 41);
+            this.label1.Size = new System.Drawing.Size(272, 51);
             this.label1.TabIndex = 3;
             this.label1.Text = "FIR FORM";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.textBox12);
+            this.groupBox2.Controls.Add(this.suspectAddress);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.suspectRelation);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.suspectName);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.suspect);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(11, 497);
+            this.groupBox2.Location = new System.Drawing.Point(15, 612);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(714, 201);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(952, 247);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox13);
-            this.groupBox3.Controls.Add(this.textBox15);
+            this.groupBox3.Controls.Add(this.witnessAddress);
+            this.groupBox3.Controls.Add(this.witnessName);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.textBox14);
-            this.groupBox3.Controls.Add(this.comboBox4);
+            this.groupBox3.Controls.Add(this.witnessRelation);
+            this.groupBox3.Controls.Add(this.witness);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label21);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.groupBox3.Location = new System.Drawing.Point(357, 12);
+            this.groupBox3.Location = new System.Drawing.Point(476, 15);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(351, 173);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(468, 213);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             // 
-            // textBox13
+            // witnessAddress
             // 
-            this.textBox13.Location = new System.Drawing.Point(191, 74);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(133, 54);
-            this.textBox13.TabIndex = 50;
+            this.witnessAddress.Location = new System.Drawing.Point(255, 91);
+            this.witnessAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.witnessAddress.Multiline = true;
+            this.witnessAddress.Name = "witnessAddress";
+            this.witnessAddress.Size = new System.Drawing.Size(176, 66);
+            this.witnessAddress.TabIndex = 50;
             // 
-            // textBox15
+            // witnessName
             // 
-            this.textBox15.Location = new System.Drawing.Point(7, 76);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(155, 20);
-            this.textBox15.TabIndex = 46;
+            this.witnessName.Location = new System.Drawing.Point(9, 94);
+            this.witnessName.Margin = new System.Windows.Forms.Padding(4);
+            this.witnessName.Name = "witnessName";
+            this.witnessName.Size = new System.Drawing.Size(205, 23);
+            this.witnessName.TabIndex = 46;
             // 
             // label16
             // 
@@ -447,9 +482,10 @@
             this.label16.Cursor = System.Windows.Forms.Cursors.Default;
             this.label16.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.label16.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label16.Location = new System.Drawing.Point(191, 51);
+            this.label16.Location = new System.Drawing.Point(255, 63);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(107, 14);
+            this.label16.Size = new System.Drawing.Size(135, 18);
             this.label16.TabIndex = 49;
             this.label16.Text = "Address of Witness";
             // 
@@ -459,31 +495,34 @@
             this.label22.Cursor = System.Windows.Forms.Cursors.Default;
             this.label22.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(8, 15);
+            this.label22.Location = new System.Drawing.Point(11, 18);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(88, 14);
+            this.label22.Size = new System.Drawing.Size(110, 18);
             this.label22.TabIndex = 43;
             this.label22.Text = "Witness (if any)";
             // 
-            // textBox14
+            // witnessRelation
             // 
-            this.textBox14.Location = new System.Drawing.Point(7, 136);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(155, 20);
-            this.textBox14.TabIndex = 48;
+            this.witnessRelation.Location = new System.Drawing.Point(9, 167);
+            this.witnessRelation.Margin = new System.Windows.Forms.Padding(4);
+            this.witnessRelation.Name = "witnessRelation";
+            this.witnessRelation.Size = new System.Drawing.Size(205, 23);
+            this.witnessRelation.TabIndex = 48;
             // 
-            // comboBox4
+            // witness
             // 
-            this.comboBox4.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.witness.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.witness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.witness.FormattingEnabled = true;
+            this.witness.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox4.Location = new System.Drawing.Point(133, 15);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(151, 21);
-            this.comboBox4.TabIndex = 44;
+            this.witness.Location = new System.Drawing.Point(177, 18);
+            this.witness.Margin = new System.Windows.Forms.Padding(4);
+            this.witness.Name = "witness";
+            this.witness.Size = new System.Drawing.Size(200, 25);
+            this.witness.TabIndex = 44;
             // 
             // label20
             // 
@@ -491,9 +530,10 @@
             this.label20.Cursor = System.Windows.Forms.Cursors.Default;
             this.label20.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(6, 112);
+            this.label20.Location = new System.Drawing.Point(8, 138);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(120, 14);
+            this.label20.Size = new System.Drawing.Size(150, 18);
             this.label20.TabIndex = 47;
             this.label20.Text = "Relation with Witness";
             // 
@@ -503,19 +543,21 @@
             this.label21.Cursor = System.Windows.Forms.Cursors.Default;
             this.label21.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label21.Location = new System.Drawing.Point(5, 53);
+            this.label21.Location = new System.Drawing.Point(7, 65);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(96, 14);
+            this.label21.Size = new System.Drawing.Size(121, 18);
             this.label21.TabIndex = 45;
             this.label21.Text = "Name of Witness";
             // 
-            // textBox12
+            // suspectAddress
             // 
-            this.textBox12.Location = new System.Drawing.Point(181, 78);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(133, 54);
-            this.textBox12.TabIndex = 33;
+            this.suspectAddress.Location = new System.Drawing.Point(241, 96);
+            this.suspectAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.suspectAddress.Multiline = true;
+            this.suspectAddress.Name = "suspectAddress";
+            this.suspectAddress.Size = new System.Drawing.Size(176, 66);
+            this.suspectAddress.TabIndex = 33;
             // 
             // label19
             // 
@@ -523,18 +565,20 @@
             this.label19.Cursor = System.Windows.Forms.Cursors.Default;
             this.label19.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.label19.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label19.Location = new System.Drawing.Point(178, 55);
+            this.label19.Location = new System.Drawing.Point(237, 68);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(106, 14);
+            this.label19.Size = new System.Drawing.Size(135, 18);
             this.label19.TabIndex = 32;
             this.label19.Text = "Address of Suspect";
             // 
-            // textBox11
+            // suspectRelation
             // 
-            this.textBox11.Location = new System.Drawing.Point(7, 140);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(155, 20);
-            this.textBox11.TabIndex = 31;
+            this.suspectRelation.Location = new System.Drawing.Point(9, 172);
+            this.suspectRelation.Margin = new System.Windows.Forms.Padding(4);
+            this.suspectRelation.Name = "suspectRelation";
+            this.suspectRelation.Size = new System.Drawing.Size(205, 22);
+            this.suspectRelation.TabIndex = 31;
             // 
             // label18
             // 
@@ -542,18 +586,20 @@
             this.label18.Cursor = System.Windows.Forms.Cursors.Default;
             this.label18.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(6, 116);
+            this.label18.Location = new System.Drawing.Point(8, 143);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(119, 14);
+            this.label18.Size = new System.Drawing.Size(150, 18);
             this.label18.TabIndex = 30;
             this.label18.Text = "Relation with Suspect";
             // 
-            // textBox10
+            // suspectName
             // 
-            this.textBox10.Location = new System.Drawing.Point(7, 80);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(155, 20);
-            this.textBox10.TabIndex = 29;
+            this.suspectName.Location = new System.Drawing.Point(9, 98);
+            this.suspectName.Margin = new System.Windows.Forms.Padding(4);
+            this.suspectName.Name = "suspectName";
+            this.suspectName.Size = new System.Drawing.Size(205, 22);
+            this.suspectName.TabIndex = 29;
             // 
             // label17
             // 
@@ -561,24 +607,26 @@
             this.label17.Cursor = System.Windows.Forms.Cursors.Default;
             this.label17.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label17.Location = new System.Drawing.Point(5, 57);
+            this.label17.Location = new System.Drawing.Point(7, 70);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(95, 14);
+            this.label17.Size = new System.Drawing.Size(121, 18);
             this.label17.TabIndex = 28;
             this.label17.Text = "Name of Suspect";
             // 
-            // comboBox3
+            // suspect
             // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.suspect.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.suspect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.suspect.FormattingEnabled = true;
+            this.suspect.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.comboBox3.Location = new System.Drawing.Point(133, 19);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(151, 21);
-            this.comboBox3.TabIndex = 25;
+            this.suspect.Location = new System.Drawing.Point(177, 23);
+            this.suspect.Margin = new System.Windows.Forms.Padding(4);
+            this.suspect.Name = "suspect";
+            this.suspect.Size = new System.Drawing.Size(200, 24);
+            this.suspect.TabIndex = 25;
             // 
             // label15
             // 
@@ -586,39 +634,43 @@
             this.label15.Cursor = System.Windows.Forms.Cursors.Default;
             this.label15.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(8, 19);
+            this.label15.Location = new System.Drawing.Point(11, 23);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(87, 14);
+            this.label15.Size = new System.Drawing.Size(110, 18);
             this.label15.TabIndex = 24;
             this.label15.Text = "Suspect (if any)";
             // 
-            // loginBtn
+            // submitBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.loginBtn.FlatAppearance.BorderSize = 10;
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.loginBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.ForeColor = System.Drawing.Color.Bisque;
-            this.loginBtn.Location = new System.Drawing.Point(259, 718);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(210, 48);
-            this.loginBtn.TabIndex = 12;
-            this.loginBtn.Text = "SUBMIT";
-            this.loginBtn.UseVisualStyleBackColor = false;
+            this.submitBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.submitBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.submitBtn.FlatAppearance.BorderSize = 10;
+            this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.submitBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitBtn.ForeColor = System.Drawing.Color.Bisque;
+            this.submitBtn.Location = new System.Drawing.Point(345, 884);
+            this.submitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(280, 59);
+            this.submitBtn.TabIndex = 12;
+            this.submitBtn.Text = "SUBMIT";
+            this.submitBtn.UseVisualStyleBackColor = false;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // FIR_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 796);
-            this.Controls.Add(this.loginBtn);
+            this.ClientSize = new System.Drawing.Size(989, 980);
+            this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FIR_Form";
             this.Text = "FIR_Form";
+            this.Load += new System.EventHandler(this.FIR_Form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -633,51 +685,51 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button loginBtn;
+        public System.Windows.Forms.ComboBox town;
+        public System.Windows.Forms.TextBox address;
+        public System.Windows.Forms.TextBox cellno;
+        public System.Windows.Forms.TextBox email;
+        public System.Windows.Forms.TextBox cnic;
+        public System.Windows.Forms.TextBox fname;
+        public System.Windows.Forms.TextBox name;
+        public System.Windows.Forms.ComboBox weapon;
+        public System.Windows.Forms.TextBox incidentDet;
+        public System.Windows.Forms.TextBox location;
+        public System.Windows.Forms.DateTimePicker time;
+        public System.Windows.Forms.DateTimePicker date;
+        public System.Windows.Forms.TextBox lostItems;
+        public System.Windows.Forms.ComboBox suspect;
+        public System.Windows.Forms.TextBox witnessAddress;
+        public System.Windows.Forms.TextBox witnessName;
+        public System.Windows.Forms.TextBox witnessRelation;
+        public System.Windows.Forms.TextBox suspectAddress;
+        public System.Windows.Forms.TextBox suspectRelation;
+        public System.Windows.Forms.TextBox suspectName;
+        public System.Windows.Forms.ComboBox witness;
+        public System.Windows.Forms.Button submitBtn;
     }
 }

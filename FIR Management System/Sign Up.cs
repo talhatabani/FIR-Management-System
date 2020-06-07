@@ -14,7 +14,7 @@ namespace FIR_Management_System
 {
     public partial class Sign_Up : Form
     {
-        private int role = 0;
+        private int role = users.getRole();
         public Sign_Up()
         {
             InitializeComponent();

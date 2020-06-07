@@ -11,12 +11,23 @@ namespace FIR_Management_System
 {
     public class users
     {
-        private String userName;
-        private String password;
+        private string userName;
+        private string password;
+        private static int role;
 
         public users()
         {
 
+        }
+
+        public static void setRole(int thisRole)
+        {
+            role = thisRole;
+        }
+
+        public static int getRole()
+        {
+            return role;
         }
 
         public users(String userName, String password)
@@ -90,10 +101,9 @@ namespace FIR_Management_System
             if(status == true)
             {
                 MessageBox.Show("Login Successful!");
-                dashboard ds = new dashboard();
+                dashboardPolice ds = new dashboardPolice();
                 loginPanelPolice lp = new loginPanelPolice();
                 lp.Hide();
-                ds.setRole(role);
                 ds.ShowDialog();
                 lp.Close();
             }
@@ -125,36 +135,31 @@ namespace FIR_Management_System
 
     public class constable : users
     {
-        int role;
-
         public constable(String userName, String password, int role) : base(userName, password)
         {
-            this.role = role;
-            bool status = base.loginCheck(userName, password, role);
+            users.setRole(role);
+            bool status = base.loginCheck(userName, password, users.getRole());
             base.successful(status, role);
         }
     }
 
     public class dsp : users
     {
-        int role;
 
         public dsp(String userName, String password, int role) : base(userName, password)
         {
-            this.role = role;
-            bool status = base.loginCheck(userName, password, role);
+            users.setRole(role);
+            bool status = base.loginCheck(userName, password, users.getRole());
             base.successful(status, role);
         }
     }
 
     public class comissioner : users
     {
-        int role;
-
         public comissioner(String userName, String password, int role) : base(userName, password)
         {
-            this.role = role;
-            bool status = base.loginCheck(userName, password, role);
+            users.setRole(role);
+            bool status = base.loginCheck(userName, password, users.getRole());
             base.successful(status, role);
         }
     }
