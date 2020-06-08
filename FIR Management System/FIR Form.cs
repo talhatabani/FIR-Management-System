@@ -59,8 +59,276 @@ namespace FIR_Management_System
                 witness.Text,
                 witnessName.Text,
                 witnessRelation.Text,
-                witnessAddress.Text
+                textBox1.Text
            );
+        }
+
+        private void name_Enter(object sender, EventArgs e)
+        {
+            if(name.Text == "Someone"){
+                name.Text = "";
+
+                name.ForeColor = Color.Black; 
+            }
+        }
+
+        private void name_Leave(object sender, EventArgs e)
+        {
+            if (name.Text == "")
+            {
+                name.Text = "Someone";
+
+                name.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void fname_Enter(object sender, EventArgs e)
+        {
+            if (fname.Text == "Someone")
+            {
+                fname.Text = "";
+
+                fname.ForeColor = Color.Black;
+            }
+        }
+
+        private void fname_Leave(object sender, EventArgs e)
+        {
+            if (fname.Text == "")
+            {
+                fname.Text = "Someone";
+
+                fname.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void cnic_Enter(object sender, EventArgs e)
+        {
+            if (cnic.Text == "00000-0000000-0")
+            {
+                cnic.Text = "";
+
+                cnic.ForeColor = Color.Black;
+            }
+        }
+
+        private void cnic_Leave(object sender, EventArgs e)
+        {
+            if (cnic.Text == "")
+            {
+                cnic.Text = "00000-0000000-0";
+
+                cnic.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void email_Enter(object sender, EventArgs e)
+        {
+            if (email.Text == "someone@example.com")
+            {
+                email.Text = "";
+
+                email.ForeColor = Color.Black;
+            }
+        }
+
+        private void email_Leave(object sender, EventArgs e)
+        {
+            if (email.Text == "")
+            {
+                email.Text = "someone@example.com";
+
+                email.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void cellno_Enter(object sender, EventArgs e)
+        {
+            if (cellno.Text == "0300-1234567")
+            {
+                cellno.Text = "";
+
+                cellno.ForeColor = Color.Black;
+            }
+        }
+
+        private void cellno_Leave(object sender, EventArgs e)
+        {
+            if (cellno.Text == "")
+            {
+                cellno.Text = "0300-1234567";
+
+                cellno.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void address_Enter(object sender, EventArgs e)
+        {
+            if (address.Text == "For Example: "+
+
+"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
+            {
+                address.Text = "";
+
+                address.ForeColor = Color.Black;
+            }
+        }
+
+        private void address_Leave(object sender, EventArgs e)
+        {
+            if (address.Text == "")
+            {
+                address.Text = "For Example: " +
+
+"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
+
+                address.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void lostItems_Enter(object sender, EventArgs e)
+        {
+            if (lostItems.Text == "For Example: " +
+"Mobile phone along with 20k cash and a hand bag  of pink color branded of gucci.")
+            {
+                lostItems.Text = "";
+
+                lostItems.ForeColor = Color.Black;
+            }
+        }
+
+        private void lostItems_Leave(object sender, EventArgs e)
+        {
+            if (lostItems.Text == "") 
+            {
+                lostItems.Text = "For Example: " +
+"Mobile phone along with 20k cash and a hand bag  of pink color branded of gucci."; 
+
+                lostItems.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void suspectName_Enter(object sender, EventArgs e)
+        {
+            if (suspectName.Text == "Someone")
+            {
+                suspectName.Text = "";
+
+                suspectName.ForeColor = Color.Black;
+            }
+        }
+
+        private void suspectName_Leave(object sender, EventArgs e)
+        {
+            if (suspectName.Text == "")
+            {
+                suspectName.Text = "Someone";
+
+                suspectName.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void suspectRelation_Enter(object sender, EventArgs e)
+        {
+            if (suspectRelation.Text == "Neighbour's Son")
+            {
+                suspectRelation.Text = "";
+
+                suspectRelation.ForeColor = Color.Black;
+            }
+        }
+
+        private void suspectRelation_Leave(object sender, EventArgs e)
+        {
+            if (suspectRelation.Text == "")
+            {
+                suspectRelation.Text = "Neighbour's Son";
+
+                suspectRelation.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void suspectAddress_Enter(object sender, EventArgs e)
+        {
+            if(address.Text == "For Example: " +
+"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
+            {
+                address.Text = "";
+
+                address.ForeColor = Color.Black;
+            }
+        }
+
+        private void suspectAddress_Leave(object sender, EventArgs e)
+        {
+            if (address.Text == "")
+            {
+                address.Text = "For Example: " +
+"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
+
+                address.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void witnessName_Enter(object sender, EventArgs e)
+        {
+            if (witnessName.Text == "Someone")
+            {
+                witnessName.Text = "";
+
+                witnessName.ForeColor = Color.Black;
+            }
+        }
+
+        private void witnessName_Leave(object sender, EventArgs e)
+        {
+            if (witnessName.Text == "")
+            {
+                witnessName.Text = "Someone";
+
+                witnessName.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void witnessRelation_Enter(object sender, EventArgs e)
+        {
+            if (witnessRelation.Text == "Shop Keeper")
+            {
+                witnessRelation.Text = "";
+
+                witnessRelation.ForeColor = Color.Black;
+            }
+        }
+
+        private void witnessRelation_Leave(object sender, EventArgs e)
+        {
+            if (witnessRelation.Text == "")
+            {
+                witnessRelation.Text = "Shop Keeper";
+
+                witnessRelation.ForeColor = Color.DarkGray;
+            }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "For Example: A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
+            {
+                textBox1.Text = "";
+
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "")
+            {
+                textBox1.Text = "For Example: " +
+"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
+
+                textBox1.ForeColor = Color.DarkGray;
+            }
         }
     }
 }

@@ -35,9 +35,11 @@ namespace FIR_Management_System
             {
 
                 comissioner cs = new comissioner(username.Text, password.Text, 3);
-
+                
                 //MessageBox.Show("Comissioner  " +  cs.successful());
             }
+            this.Hide();
+            this.Close();
         }
         
 
@@ -76,6 +78,12 @@ namespace FIR_Management_System
             this.Hide();
             su.ShowDialog();
             this.Close();
+        }
+
+        private void username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+                SendKeys.Send("{TAB}");
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FIR_Management_System
 {
-    partial class runningFIR
+    partial class RunningFIR
     {
         /// <summary>
         /// Required designer variable.
@@ -46,11 +46,11 @@
             // username
             // 
             this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username.Location = new System.Drawing.Point(42, 127);
-            this.username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.username.Location = new System.Drawing.Point(32, 103);
+            this.username.Margin = new System.Windows.Forms.Padding(2);
             this.username.Multiline = true;
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(409, 32);
+            this.username.Size = new System.Drawing.Size(308, 27);
             this.username.TabIndex = 5;
             this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -59,9 +59,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(39, 98);
+            this.label3.Location = new System.Drawing.Point(29, 80);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 23);
+            this.label3.Size = new System.Drawing.Size(181, 19);
             this.label3.TabIndex = 6;
             this.label3.Text = "Search by FIR# or Name:";
             // 
@@ -70,10 +71,10 @@
             this.generateFIRBtn.BackColor = System.Drawing.Color.Firebrick;
             this.generateFIRBtn.Font = new System.Drawing.Font("Verdana", 8.8F, System.Drawing.FontStyle.Bold);
             this.generateFIRBtn.ForeColor = System.Drawing.Color.White;
-            this.generateFIRBtn.Location = new System.Drawing.Point(480, 124);
-            this.generateFIRBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generateFIRBtn.Location = new System.Drawing.Point(360, 101);
+            this.generateFIRBtn.Margin = new System.Windows.Forms.Padding(2);
             this.generateFIRBtn.Name = "generateFIRBtn";
-            this.generateFIRBtn.Size = new System.Drawing.Size(144, 41);
+            this.generateFIRBtn.Size = new System.Drawing.Size(108, 33);
             this.generateFIRBtn.TabIndex = 9;
             this.generateFIRBtn.Text = "Search FIR";
             this.generateFIRBtn.UseVisualStyleBackColor = false;
@@ -82,10 +83,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(94)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 11);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(9, 9);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(640, 66);
+            this.panel2.Size = new System.Drawing.Size(480, 54);
             this.panel2.TabIndex = 10;
             // 
             // label2
@@ -94,9 +95,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(219, 15);
+            this.label2.Location = new System.Drawing.Point(164, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 34);
+            this.label2.Size = new System.Drawing.Size(187, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Running FIR\'s";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -112,12 +114,13 @@
             this.name,
             this.town,
             this.viewFir});
-            this.dgv.Location = new System.Drawing.Point(12, 196);
+            this.dgv.Location = new System.Drawing.Point(9, 159);
+            this.dgv.Margin = new System.Windows.Forms.Padding(2);
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowTemplate.Height = 24;
-            this.dgv.Size = new System.Drawing.Size(640, 387);
+            this.dgv.Size = new System.Drawing.Size(480, 314);
             this.dgv.TabIndex = 11;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
@@ -127,7 +130,7 @@
             this.fid.HeaderText = "FIR#";
             this.fid.Name = "fid";
             this.fid.ReadOnly = true;
-            this.fid.Width = 66;
+            this.fid.Width = 56;
             // 
             // date
             // 
@@ -135,7 +138,7 @@
             this.date.HeaderText = "Date";
             this.date.Name = "date";
             this.date.ReadOnly = true;
-            this.date.Width = 67;
+            this.date.Width = 55;
             // 
             // name
             // 
@@ -159,18 +162,19 @@
             this.viewFir.ToolTipText = "View FIR";
             this.viewFir.UseColumnTextForButtonValue = true;
             // 
-            // runningFIR
+            // RunningFIR
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(664, 595);
+            this.ClientSize = new System.Drawing.Size(498, 483);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.generateFIRBtn);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label3);
-            this.Name = "runningFIR";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "RunningFIR";
             this.Text = "runningFIR";
             this.Load += new System.EventHandler(this.runningFIR_Load);
             this.panel2.ResumeLayout(false);

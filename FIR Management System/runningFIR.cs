@@ -11,10 +11,10 @@ using FIR_Management_System.myClasses;
 
 namespace FIR_Management_System
 {
-    public partial class runningFIR : Form
+    public partial class RunningFIR : Form
     {
         private int firID;
-        public runningFIR()
+        public RunningFIR()
         {
             InitializeComponent();
         }
@@ -39,6 +39,11 @@ namespace FIR_Management_System
                 firCRUD fir = new firCRUD();
                 fir.fillFirForm(firID);
             }
+        }
+
+        private void generateFIRBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
