@@ -12,7 +12,7 @@ namespace FIR_Management_System.myClasses
 {
     class firCRUD
     {
-        public runningFIR rnFIR;
+        public RunningFIR rnFIR;
         private int role = users.getRole();
         public firCRUD()
         {
@@ -117,7 +117,7 @@ namespace FIR_Management_System.myClasses
 
         public void fillFirForm(int fid)
         {
-            runningFIR rf = new runningFIR();
+            RunningFIR rf = new RunningFIR();
             FIR_Form ff = new FIR_Form();
             rf.Hide();
 
@@ -148,7 +148,7 @@ namespace FIR_Management_System.myClasses
                     ff.witness.Text = myReader[18].ToString();
                     ff.witnessName.Text = myReader[19].ToString();
                     ff.witnessRelation.Text = myReader[20].ToString();
-                    ff.witnessAddress.Text = myReader[21].ToString();
+                    ff.textBox1.Text = myReader[21].ToString();
                 }
             }
 
@@ -174,7 +174,7 @@ namespace FIR_Management_System.myClasses
                 ff.witness.Enabled = false;
                 ff.witnessName.Enabled = false;
                 ff.witnessRelation.Enabled = false;
-                ff.witnessAddress.Enabled = false;
+                ff.textBox1.Enabled = false;
                 ff.submitBtn.Enabled = false;
             }
 

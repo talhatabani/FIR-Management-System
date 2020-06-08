@@ -51,7 +51,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(11, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(99, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(368, 127);
             this.panel1.TabIndex = 2;
@@ -87,7 +87,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(94)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(-2, 140);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(368, 54);
             this.panel2.TabIndex = 3;
@@ -122,12 +122,13 @@
             // 
             this.username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username.Location = new System.Drawing.Point(27, 231);
-            this.username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.username.Margin = new System.Windows.Forms.Padding(2);
             this.username.Multiline = true;
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(308, 27);
             this.username.TabIndex = 1;
             this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.username_KeyDown);
             // 
             // label4
             // 
@@ -157,7 +158,7 @@
             // 
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password.Location = new System.Drawing.Point(28, 286);
-            this.password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.password.Margin = new System.Windows.Forms.Padding(2);
             this.password.Multiline = true;
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(308, 27);
@@ -166,14 +167,14 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(94)))), ((int)(((byte)(242)))));
+            this.loginBtn.BackColor = System.Drawing.Color.Teal;
             this.loginBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.loginBtn.FlatAppearance.BorderSize = 10;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.ForeColor = System.Drawing.Color.White;
             this.loginBtn.Location = new System.Drawing.Point(41, 376);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(2);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(104, 39);
             this.loginBtn.TabIndex = 4;
@@ -183,14 +184,14 @@
             // 
             // signupBtn
             // 
-            this.signupBtn.BackColor = System.Drawing.Color.Maroon;
+            this.signupBtn.BackColor = System.Drawing.Color.FloralWhite;
             this.signupBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.signupBtn.FlatAppearance.BorderSize = 10;
             this.signupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.signupBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signupBtn.ForeColor = System.Drawing.Color.White;
+            this.signupBtn.ForeColor = System.Drawing.Color.Brown;
             this.signupBtn.Location = new System.Drawing.Point(206, 376);
-            this.signupBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.signupBtn.Margin = new System.Windows.Forms.Padding(2);
             this.signupBtn.Name = "signupBtn";
             this.signupBtn.Size = new System.Drawing.Size(124, 39);
             this.signupBtn.TabIndex = 16;
@@ -207,7 +208,7 @@
             "DSP",
             "Comissioner"});
             this.role.Location = new System.Drawing.Point(85, 328);
-            this.role.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.role.Margin = new System.Windows.Forms.Padding(2);
             this.role.Name = "role";
             this.role.Size = new System.Drawing.Size(92, 21);
             this.role.TabIndex = 3;
@@ -230,7 +231,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "loginPanelPolice";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.loginPanelPolice_Load);

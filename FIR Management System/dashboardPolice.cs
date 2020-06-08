@@ -25,6 +25,7 @@ namespace FIR_Management_System
             this.Hide();
             fir.ShowDialog();
             this.Close();
+            
         }
 
         private void runningFIRBtn_Click(object sender, EventArgs e)

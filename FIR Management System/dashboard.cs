@@ -54,5 +54,12 @@ namespace FIR_Management_System
             fir.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Welcome wel = new Welcome();
+            this.Close();
+            wel.ShowDialog();
+        }
     }
 }
