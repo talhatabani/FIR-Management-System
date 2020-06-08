@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.generateFIRBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.pendingFir = new System.Windows.Forms.Button();
+            this.deletedFir = new System.Windows.Forms.Button();
+            this.completedFir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.runningFIRBtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.signOut = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,41 +53,41 @@
             this.generateFIRBtn.UseVisualStyleBackColor = false;
             this.generateFIRBtn.Click += new System.EventHandler(this.generateFIRBtn_Click);
             // 
-            // button1
+            // pendingFir
             // 
-            this.button1.BackColor = System.Drawing.Color.Firebrick;
-            this.button1.Font = new System.Drawing.Font("Verdana", 8.8F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(274, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 44);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Pending FIRs";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pendingFir.BackColor = System.Drawing.Color.Firebrick;
+            this.pendingFir.Font = new System.Drawing.Font("Verdana", 8.8F, System.Drawing.FontStyle.Bold);
+            this.pendingFir.ForeColor = System.Drawing.Color.White;
+            this.pendingFir.Location = new System.Drawing.Point(274, 91);
+            this.pendingFir.Name = "pendingFir";
+            this.pendingFir.Size = new System.Drawing.Size(191, 44);
+            this.pendingFir.TabIndex = 10;
+            this.pendingFir.Text = "Pending FIRs";
+            this.pendingFir.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // deletedFir
             // 
-            this.button2.BackColor = System.Drawing.Color.Firebrick;
-            this.button2.Font = new System.Drawing.Font("Verdana", 8.8F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(274, 165);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(191, 44);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Pending FIRs";
-            this.button2.UseVisualStyleBackColor = false;
+            this.deletedFir.BackColor = System.Drawing.Color.Firebrick;
+            this.deletedFir.Font = new System.Drawing.Font("Verdana", 8.8F, System.Drawing.FontStyle.Bold);
+            this.deletedFir.ForeColor = System.Drawing.Color.White;
+            this.deletedFir.Location = new System.Drawing.Point(274, 165);
+            this.deletedFir.Name = "deletedFir";
+            this.deletedFir.Size = new System.Drawing.Size(191, 44);
+            this.deletedFir.TabIndex = 11;
+            this.deletedFir.Text = "Deleted FIRs";
+            this.deletedFir.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // completedFir
             // 
-            this.button3.BackColor = System.Drawing.Color.Green;
-            this.button3.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(124, 239);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(252, 52);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Completed FIRs";
-            this.button3.UseVisualStyleBackColor = false;
+            this.completedFir.BackColor = System.Drawing.Color.Green;
+            this.completedFir.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.completedFir.ForeColor = System.Drawing.Color.White;
+            this.completedFir.Location = new System.Drawing.Point(124, 239);
+            this.completedFir.Name = "completedFir";
+            this.completedFir.Size = new System.Drawing.Size(252, 52);
+            this.completedFir.TabIndex = 12;
+            this.completedFir.Text = "Completed FIRs";
+            this.completedFir.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -129,29 +129,30 @@
             this.runningFIRBtn.UseVisualStyleBackColor = false;
             this.runningFIRBtn.Click += new System.EventHandler(this.runningFIRBtn_Click);
             // 
-            // button4
+            // signOut
             // 
-            this.button4.BackColor = System.Drawing.Color.Green;
-            this.button4.BackgroundImage = global::FIR_Management_System.Properties.Resources.logout1;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(192, 308);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 105);
-            this.button4.TabIndex = 16;
-            this.button4.UseVisualStyleBackColor = false;
+            this.signOut.BackColor = System.Drawing.Color.Green;
+            this.signOut.BackgroundImage = global::FIR_Management_System.Properties.Resources.logout1;
+            this.signOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.signOut.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.signOut.ForeColor = System.Drawing.Color.White;
+            this.signOut.Location = new System.Drawing.Point(192, 308);
+            this.signOut.Name = "signOut";
+            this.signOut.Size = new System.Drawing.Size(110, 110);
+            this.signOut.TabIndex = 16;
+            this.signOut.UseVisualStyleBackColor = false;
+            this.signOut.Click += new System.EventHandler(this.signOut_Click);
             // 
             // dashboardPolice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(506, 450);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.signOut);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.completedFir);
+            this.Controls.Add(this.deletedFir);
+            this.Controls.Add(this.pendingFir);
             this.Controls.Add(this.runningFIRBtn);
             this.Controls.Add(this.generateFIRBtn);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -167,11 +168,11 @@
 
         private System.Windows.Forms.Button generateFIRBtn;
         private System.Windows.Forms.Button runningFIRBtn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button pendingFir;
+        private System.Windows.Forms.Button completedFir;
+        private System.Windows.Forms.Button deletedFir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button signOut;
     }
 }

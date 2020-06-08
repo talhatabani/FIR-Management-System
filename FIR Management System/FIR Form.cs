@@ -23,6 +23,7 @@ namespace FIR_Management_System
 
         private void FIR_Form_Load(object sender, EventArgs e)
         {
+            roleLab.Text = role.ToString();
             //if(update == 0)
             //{
             //    submitBtn.Text = "Submit";
@@ -59,7 +60,7 @@ namespace FIR_Management_System
                 witness.Text,
                 witnessName.Text,
                 witnessRelation.Text,
-                textBox1.Text
+                witnessAddress.Text
            );
         }
 
@@ -164,9 +165,7 @@ namespace FIR_Management_System
 
         private void address_Enter(object sender, EventArgs e)
         {
-            if (address.Text == "For Example: "+
-
-"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
+            if (address.Text == "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
             {
                 address.Text = "";
 
@@ -178,9 +177,7 @@ namespace FIR_Management_System
         {
             if (address.Text == "")
             {
-                address.Text = "For Example: " +
-
-"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
+                address.Text = "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
 
                 address.ForeColor = Color.DarkGray;
             }
@@ -188,8 +185,7 @@ namespace FIR_Management_System
 
         private void lostItems_Enter(object sender, EventArgs e)
         {
-            if (lostItems.Text == "For Example: " +
-"Mobile phone along with 20k cash and a hand bag  of pink color branded of gucci.")
+            if (lostItems.Text == "Mobile phone along with 20k cash and a hand bag  of pink color branded of gucci.")
             {
                 lostItems.Text = "";
 
@@ -201,8 +197,7 @@ namespace FIR_Management_System
         {
             if (lostItems.Text == "") 
             {
-                lostItems.Text = "For Example: " +
-"Mobile phone along with 20k cash and a hand bag  of pink color branded of gucci."; 
+                lostItems.Text = "Mobile phone along with 20k cash and a hand bag  of pink color branded of gucci."; 
 
                 lostItems.ForeColor = Color.DarkGray;
             }
@@ -250,8 +245,7 @@ namespace FIR_Management_System
 
         private void suspectAddress_Enter(object sender, EventArgs e)
         {
-            if(address.Text == "For Example: " +
-"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
+            if(address.Text == "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
             {
                 address.Text = "";
 
@@ -263,8 +257,7 @@ namespace FIR_Management_System
         {
             if (address.Text == "")
             {
-                address.Text = "For Example: " +
-"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
+                address.Text = "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
 
                 address.ForeColor = Color.DarkGray;
             }
@@ -310,24 +303,23 @@ namespace FIR_Management_System
             }
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        private void witnessAddress_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "For Example: A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
+            if (witnessAddress.Text.Equals("A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad."))
             {
-                textBox1.Text = "";
+                witnessAddress.Text = "";
 
-                textBox1.ForeColor = Color.Black;
+                witnessAddress.ForeColor = Color.Black;
             }
         }
 
-        private void textBox1_Leave(object sender, EventArgs e)
+        private void witnessAddress_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (witnessAddress.Text == "")
             {
-                textBox1.Text = "For Example: " +
-"A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
+                witnessAddress.Text = "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
 
-                textBox1.ForeColor = Color.DarkGray;
+                witnessAddress.ForeColor = Color.DarkGray;
             }
         }
     }

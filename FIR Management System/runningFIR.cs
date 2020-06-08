@@ -14,6 +14,7 @@ namespace FIR_Management_System
     public partial class RunningFIR : Form
     {
         private int firID;
+        private int role = users.getRole();
         public RunningFIR()
         {
             InitializeComponent();

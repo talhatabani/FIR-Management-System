@@ -50,7 +50,7 @@ namespace FIR_Management_System.myClasses
             sc.CommandText = "sp_FirInsert";
 
             // Status Details //
-            //  Deleted = 0, Approved = 1, Not Approved = 2, FIR Done = 3 //
+            //  Deleted = 0, Approved = 1, Not Approved = 2, FIR completed = 3 //
 
             if (role == 2 || role == 3)
             {
@@ -148,11 +148,11 @@ namespace FIR_Management_System.myClasses
                     ff.witness.Text = myReader[18].ToString();
                     ff.witnessName.Text = myReader[19].ToString();
                     ff.witnessRelation.Text = myReader[20].ToString();
-                    ff.textBox1.Text = myReader[21].ToString();
+                    ff.witnessAddress.Text = myReader[21].ToString();
                 }
             }
 
-            if(ff.role != 3 || ff.role != 2)
+            if(role != 3 || role != 2)
             {
                 ff.name.Enabled = false;
                 ff.fname.Enabled = false;
@@ -174,8 +174,34 @@ namespace FIR_Management_System.myClasses
                 ff.witness.Enabled = false;
                 ff.witnessName.Enabled = false;
                 ff.witnessRelation.Enabled = false;
-                ff.textBox1.Enabled = false;
+                ff.witnessAddress.Enabled = false;
                 ff.submitBtn.Enabled = false;
+            }
+
+            else
+            {
+                ff.name.Enabled = true;
+                ff.fname.Enabled = true;
+                ff.cnic.Enabled = true;
+                ff.email.Enabled = true;
+                ff.cellno.Enabled = true;
+                ff.address.Enabled = true;
+                ff.town.Enabled = true;
+                ff.date.Enabled = true;
+                ff.time.Enabled = true;
+                ff.location.Enabled = true;
+                ff.incidentDet.Enabled = true;
+                ff.lostItems.Enabled = true;
+                ff.weapon.Enabled = true;
+                ff.suspect.Enabled = true;
+                ff.suspectName.Enabled = true;
+                ff.suspectRelation.Enabled = true;
+                ff.suspectAddress.Enabled = true;
+                ff.witness.Enabled = true;
+                ff.witnessName.Enabled = true;
+                ff.witnessRelation.Enabled = true;
+                ff.witnessAddress.Enabled = true;
+                ff.submitBtn.Enabled = true;
             }
 
             ff.submitBtn.Text = "Update Fir";
