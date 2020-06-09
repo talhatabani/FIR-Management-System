@@ -30,7 +30,18 @@ namespace FIR_Management_System
 
         private void runningFIRBtn_Click(object sender, EventArgs e)
         {
+            RunningFIR rnfir = new RunningFIR();
+            this.Hide();
+            rnfir.ShowDialog();
+            this.Close();
+         }
 
+        private void signOut_Click(object sender, EventArgs e)
+        {
+            Welcome wel = new Welcome();
+            this.Hide();
+            wel.ShowDialog();
+            this.Close();
         }
     }
 }

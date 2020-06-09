@@ -58,7 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.witnessAddress = new System.Windows.Forms.TextBox();
             this.witnessName = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -75,6 +75,7 @@
             this.suspect = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
+            this.roleLab = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -124,8 +125,8 @@
             this.lostItems.Name = "lostItems";
             this.lostItems.Size = new System.Drawing.Size(196, 71);
             this.lostItems.TabIndex = 25;
-            this.lostItems.Text = "For Example:\r\nMobile phone along with 20k cash and a hand bag  of pink color  bra" +
-    "nded of gucci.";
+            this.lostItems.Text = "Mobile phone along with 20k cash and a hand bag  of pink color  branded of gucci." +
+    "";
             this.lostItems.Enter += new System.EventHandler(this.lostItems_Enter);
             this.lostItems.Leave += new System.EventHandler(this.lostItems_Leave);
             // 
@@ -280,7 +281,7 @@
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(196, 82);
             this.address.TabIndex = 11;
-            this.address.Text = "For Example: \r\n\r\nA-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
+            this.address.Text = " A-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
             this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.address.Enter += new System.EventHandler(this.address_Enter);
             this.address.Leave += new System.EventHandler(this.address_Leave);
@@ -445,7 +446,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.witnessAddress);
             this.groupBox3.Controls.Add(this.witnessName);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label22);
@@ -460,18 +461,18 @@
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             // 
-            // textBox1
+            // witnessAddress
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.7F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox1.Location = new System.Drawing.Point(194, 76);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 60);
-            this.textBox1.TabIndex = 50;
-            this.textBox1.Text = "For Example: \r\nA-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.witnessAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.7F);
+            this.witnessAddress.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.witnessAddress.Location = new System.Drawing.Point(194, 76);
+            this.witnessAddress.Multiline = true;
+            this.witnessAddress.Name = "witnessAddress";
+            this.witnessAddress.Size = new System.Drawing.Size(133, 60);
+            this.witnessAddress.TabIndex = 50;
+            this.witnessAddress.Text = "A-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
+            this.witnessAddress.Enter += new System.EventHandler(this.witnessAddress_Enter);
+            this.witnessAddress.Leave += new System.EventHandler(this.witnessAddress_Leave);
             // 
             // witnessName
             // 
@@ -516,7 +517,7 @@
             this.witnessRelation.Name = "witnessRelation";
             this.witnessRelation.Size = new System.Drawing.Size(155, 20);
             this.witnessRelation.TabIndex = 48;
-            this.witnessRelation.Text = "Shop Keeper ";
+            this.witnessRelation.Text = "Shop Keeper";
             this.witnessRelation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.witnessRelation.Enter += new System.EventHandler(this.witnessRelation_Enter);
             this.witnessRelation.Leave += new System.EventHandler(this.witnessRelation_Leave);
@@ -567,7 +568,7 @@
             this.suspectAddress.Name = "suspectAddress";
             this.suspectAddress.Size = new System.Drawing.Size(133, 60);
             this.suspectAddress.TabIndex = 33;
-            this.suspectAddress.Text = "For Example: \r\nA-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
+            this.suspectAddress.Text = "A-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
             this.suspectAddress.Enter += new System.EventHandler(this.suspectAddress_Enter);
             this.suspectAddress.Leave += new System.EventHandler(this.suspectAddress_Leave);
             // 
@@ -673,11 +674,22 @@
             this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
+            // roleLab
+            // 
+            this.roleLab.AutoSize = true;
+            this.roleLab.Cursor = System.Windows.Forms.Cursors.Default;
+            this.roleLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roleLab.Location = new System.Drawing.Point(141, 31);
+            this.roleLab.Name = "roleLab";
+            this.roleLab.Size = new System.Drawing.Size(0, 13);
+            this.roleLab.TabIndex = 26;
+            // 
             // FIR_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 789);
+            this.Controls.Add(this.roleLab);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
@@ -744,6 +756,7 @@
         public System.Windows.Forms.TextBox suspectName;
         public System.Windows.Forms.ComboBox witness;
         public System.Windows.Forms.Button submitBtn;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox witnessAddress;
+        private System.Windows.Forms.Label roleLab;
     }
 }
