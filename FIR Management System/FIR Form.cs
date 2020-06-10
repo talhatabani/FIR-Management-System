@@ -13,7 +13,11 @@ namespace FIR_Management_System
 {
     public partial class FIR_Form : Form
     {
+        public int status = 10;
+        public int fid;
         public int role = users.getRole();
+
+        firCRUD fc = new firCRUD();
 
         public int update = 0;
         public FIR_Form()
@@ -21,47 +25,127 @@ namespace FIR_Management_System
             InitializeComponent();
         }
 
+        public FIR_Form(string form)
+        {
+            InitializeComponent();
+            this.controlText.Text = form;
+        }
+
         private void FIR_Form_Load(object sender, EventArgs e)
         {
+            suspect.SelectedIndex = 1;
+            witness.SelectedIndex = 1;
             roleLab.Text = role.ToString();
-            //if(update == 0)
-            //{
-            //    submitBtn.Text = "Submit";
-            //}
 
-            //else
-            //{
-            //    submitBtn.Text = "Update";
-            //}
+            if(role == 10)
+            {
+                firFormTxtEnabled(false);
+            }
+            
+            if(status == 1)
+            {
+                completeBtn.Visible = true;
+            }
+
+            if (status == 2)
+            {
+                deleteBtn.Visible = true;
+            }
+
+            if (status == 3)
+            {
+                deleteBtn.Visible = true;
+            }
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            firCRUD fir = new firCRUD();
 
-            fir.saveFIR(
-                name.Text,
-                fname.Text,
-                cnic.Text,
-                email.Text,
-                Convert.ToInt64(cellno.Text),
-                address.Text,
-                town.Text,
-                date.Value.Date,
-                time.Value,
-                location.Text,
-                incidentDet.Text,
-                lostItems.Text,
-                weapon.Text,
-                suspect.Text,
-                suspectName.Text,
-                suspectRelation.Text,
-                suspectAddress.Text,
-                witness.Text,
-                witnessName.Text,
-                witnessRelation.Text,
-                witnessAddress.Text
-           );
+            if (submitBtn.Text.Equals("UPDATE"))
+            {
+                fc.updateFIR(
+                    fid,
+                    name.Text,
+                    fname.Text,
+                    cnic.Text,
+                    email.Text,
+                    Convert.ToInt64(cellno.Text),
+                    address.Text,
+                    town.Text,
+                    date.Value.Date,
+                    time.Value,
+                    location.Text,
+                    incidentDet.Text,
+                    lostItems.Text,
+                    weapon.Text,
+                    suspect.Text,
+                    suspectName.Text,
+                    suspectRelation.Text,
+                    suspectAddress.Text,
+                    witness.Text,
+                    witnessName.Text,
+                    witnessRelation.Text,
+                    witnessAddress.Text
+                );
+
+                RunningFIR rnf = new RunningFIR("Running FIR's");
+                this.Hide();
+                rnf.ShowDialog();
+                this.Close();
+            }
+
+            else if(submitBtn.Text.Equals("SUBMIT"))
+            {
+                fc.saveFIR(
+                    name.Text,
+                    fname.Text,
+                    cnic.Text,
+                    email.Text,
+                    Convert.ToInt64(cellno.Text),
+                    address.Text,
+                    town.Text,
+                    date.Value.Date,
+                    time.Value,
+                    location.Text,
+                    incidentDet.Text,
+                    lostItems.Text,
+                    weapon.Text,
+                    suspect.Text,
+                    suspectName.Text,
+                    suspectRelation.Text,
+                    suspectAddress.Text,
+                    witness.Text,
+                    witnessName.Text,
+                    witnessRelation.Text,
+                    witnessAddress.Text
+               );
+
+                RunningFIR rnf = new RunningFIR(controlText.Text);
+                this.Hide();
+                rnf.ShowDialog();
+                this.Close();
+            }
+
+            else if (submitBtn.Text.Equals("APPROVE"))
+            {
+                fc.approveFIR(fid);
+                RunningFIR rnf = new RunningFIR(controlText.Text);
+                this.Close();
+            }
+
+            else if (submitBtn.Text.Equals("DELETE"))
+            {
+                fc.deleteFIR(fid);
+                RunningFIR rnf = new RunningFIR(controlText.Text);
+                this.Close();
+            }
+
+            else if (submitBtn.Text.Equals("RE INVESTIGATE"))
+            {
+                fc.reInvestigateFIR(fid);
+                RunningFIR rnf = new RunningFIR(controlText.Text);
+                this.Close();
+            }
         }
 
         private void name_Enter(object sender, EventArgs e)
@@ -115,7 +199,7 @@ namespace FIR_Management_System
 
         private void cnic_Leave(object sender, EventArgs e)
         {
-            if (cnic.Text == "")
+            if (cnic.Text != "")
             {
                 cnic.Text = "00000-0000000-0";
 
@@ -321,6 +405,110 @@ namespace FIR_Management_System
 
                 witnessAddress.ForeColor = Color.DarkGray;
             }
+        }
+
+        private void suspect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(suspect.SelectedIndex == 1)
+            {
+                suspectName.Enabled = false;
+                suspectRelation.Enabled = false;
+                suspectAddress.Enabled = false;
+            }
+
+            else
+            {
+                suspectName.Enabled = true;
+                suspectRelation.Enabled = true;
+                suspectAddress.Enabled = true;
+            }
+        }
+
+        private void witness_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (witness.SelectedIndex == 1)
+            {
+                witnessName.Enabled = false;
+                witnessRelation.Enabled = false;
+                witnessAddress.Enabled = false;
+            }
+
+            else
+            {
+                witnessName.Enabled = true;
+                witnessRelation.Enabled = true;
+                witnessAddress.Enabled = true;
+            }
+        }
+
+        public void firFormTxtEnabled(bool status)
+        {
+            name.Enabled = status;
+            fname.Enabled = status;
+            cnic.Enabled = status;
+            email.Enabled = status;
+            cellno.Enabled = status;
+            address.Enabled = status;
+            town.Enabled = status;
+            date.Enabled = status;
+            time.Enabled = status;
+            location.Enabled = status;
+            incidentDet.Enabled = status;
+            lostItems.Enabled = status;
+            weapon.Enabled = status;
+            suspect.Enabled = status;
+            suspectName.Enabled = status;
+            suspectRelation.Enabled = status;
+            suspectAddress.Enabled = status;
+            witness.Enabled = status;
+            witnessName.Enabled = status;
+            witnessRelation.Enabled = status;
+            witnessAddress.Enabled = status;
+            submitBtn.Enabled = status;
+        }
+
+        public void firFormTxtColorBlack()
+        {
+            name.ForeColor = Color.Black;
+            fname.ForeColor = Color.Black;
+            cnic.ForeColor = Color.Black;
+            email.ForeColor = Color.Black;
+            cellno.ForeColor = Color.Black;
+            address.ForeColor = Color.Black;
+            town.ForeColor = Color.Black;
+            date.ForeColor = Color.Black;
+            time.ForeColor = Color.Black;
+            location.ForeColor = Color.Black;
+            incidentDet.ForeColor = Color.Black;
+            lostItems.ForeColor = Color.Black;
+            weapon.ForeColor = Color.Black;
+            suspect.ForeColor = Color.Black;
+            suspectName.ForeColor = Color.Black;
+            suspectRelation.ForeColor = Color.Black;
+            suspectAddress.ForeColor = Color.Black;
+            witness.ForeColor = Color.Black;
+            witnessName.ForeColor = Color.Black;
+            witnessRelation.ForeColor = Color.Black;
+            witnessAddress.ForeColor = Color.Black;
+            submitBtn.ForeColor = Color.Black;
+        }
+
+        private void completeBtn_Click(object sender, EventArgs e)
+        {
+            fc.completeFIR(fid);
+            RunningFIR rf = new RunningFIR("Running FIR's");
+            this.Hide();
+            rf.ShowDialog();
+            this.Close();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            fc.deleteFIR(fid);
+            RunningFIR rf = new RunningFIR("Pending FIR's");
+            this.Hide();
+            rf.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -12,6 +12,7 @@ namespace FIR_Management_System
 {
     public partial class dashboardPolice : Form
     {
+        myClasses.firCRUD fc = new myClasses.firCRUD();
         private int role = users.getRole();
 
         public dashboardPolice()
@@ -30,18 +31,51 @@ namespace FIR_Management_System
 
         private void runningFIRBtn_Click(object sender, EventArgs e)
         {
-            RunningFIR rnfir = new RunningFIR();
+            RunningFIR rf = new RunningFIR("Running FIR's");
             this.Hide();
-            rnfir.ShowDialog();
+            rf.ShowDialog();
             this.Close();
          }
+
+        private void pendingFir_Click(object sender, EventArgs e)
+        {
+            RunningFIR rf = new RunningFIR("Pending FIR's");
+            this.Hide();
+            rf.ShowDialog();
+            this.Close();
+        }
+
+        private void deletedFir_Click(object sender, EventArgs e)
+        {
+            RunningFIR rf = new RunningFIR("Deleted FIR's");
+            this.Hide();
+            rf.ShowDialog();
+            this.Close();
+        }
+
+        private void completedFir_Click(object sender, EventArgs e)
+        {
+            RunningFIR rf = new RunningFIR("Completed FIR's");
+            this.Hide();
+            rf.ShowDialog();
+            this.Close();
+        }
 
         private void signOut_Click(object sender, EventArgs e)
         {
             Welcome wel = new Welcome();
             this.Hide();
+            MessageBox.Show("Logout Successfully");
             wel.ShowDialog();
             this.Close();
+        }
+
+        private void dashboardPolice_Load(object sender, EventArgs e)
+        {
+            deletedFIRCount.Text = fc.FIRCount(0);
+            runningFIRCount.Text = fc.FIRCount(1);
+            pendingFIRCount.Text = fc.FIRCount(2);
+            completedFIRCount.Text = fc.FIRCount(3);
         }
     }
 }
