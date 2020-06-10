@@ -14,6 +14,7 @@ namespace FIR_Management_System
         private string userName;
         private string password;
         private static int role;
+        private static string email;
 
         public users()
         {
@@ -28,6 +29,16 @@ namespace FIR_Management_System
         public static int getRole()
         {
             return role;
+        }
+
+        public static void setEmail(string thisEmail)
+        {
+            email = thisEmail;
+        }
+
+        public static string getEmail()
+        {
+            return email;
         }
 
         public users(String userName, String password)
@@ -184,6 +195,7 @@ namespace FIR_Management_System
         public bool log(String email, String pass)
         {
             this.status = base.loginCheck(email, pass);
+            users.setEmail(email);
             return status;
         }
     }

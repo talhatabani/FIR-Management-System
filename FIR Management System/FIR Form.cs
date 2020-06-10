@@ -16,6 +16,7 @@ namespace FIR_Management_System
         public int status = 10;
         public int fid;
         public int role = users.getRole();
+        public string citEmail = users.getEmail();
 
         firCRUD fc = new firCRUD();
 
@@ -37,24 +38,38 @@ namespace FIR_Management_System
             witness.SelectedIndex = 1;
             roleLab.Text = role.ToString();
 
-            if(role == 10)
+            if((role == 1 && controlText.Text.Equals("aaa")) || (role == 0 && controlText.Text.Equals("aaa")))
+            {
+                firFormTxtEnabled(true);
+                deleteBtn.Visible = false;
+            }
+
+            else if ((role == 1 && controlText.Text.Equals("Running FIR's")) || (role == 0 && controlText.Text.Equals("Citizen FIR's")))
             {
                 firFormTxtEnabled(false);
+                deleteBtn.Visible = false;
             }
             
-            if(status == 1)
+            else if(status == 1)
             {
                 completeBtn.Visible = true;
             }
 
-            if (status == 2)
+            else if (status == 2)
             {
                 deleteBtn.Visible = true;
             }
 
-            if (status == 3)
+            else if (status == 3)
             {
                 deleteBtn.Visible = true;
+            }
+
+            //////////
+
+            else if (citEmail.Equals(email.Text) && role == 0)
+            {
+                email.Enabled = false;
             }
         }
 
@@ -121,6 +136,38 @@ namespace FIR_Management_System
                );
 
                 RunningFIR rnf = new RunningFIR(controlText.Text);
+                this.Hide();
+                rnf.ShowDialog();
+                this.Close();
+            }
+
+            else if (submitBtn.Text.Equals("SUBMIT FOR APPROVAL"))
+            {
+                fc.saveFIR(
+                    name.Text,
+                    fname.Text,
+                    cnic.Text,
+                    email.Text,
+                    Convert.ToInt64(cellno.Text),
+                    address.Text,
+                    town.Text,
+                    date.Value.Date,
+                    time.Value,
+                    location.Text,
+                    incidentDet.Text,
+                    lostItems.Text,
+                    weapon.Text,
+                    suspect.Text,
+                    suspectName.Text,
+                    suspectRelation.Text,
+                    suspectAddress.Text,
+                    witness.Text,
+                    witnessName.Text,
+                    witnessRelation.Text,
+                    witnessAddress.Text
+               );
+
+                RunningFIR rnf = new RunningFIR("Citizen FIR's");
                 this.Hide();
                 rnf.ShowDialog();
                 this.Close();
@@ -199,7 +246,7 @@ namespace FIR_Management_System
 
         private void cnic_Leave(object sender, EventArgs e)
         {
-            if (cnic.Text != "")
+            if (cnic.Text == "")
             {
                 cnic.Text = "00000-0000000-0";
 

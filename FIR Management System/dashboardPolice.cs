@@ -39,26 +39,51 @@ namespace FIR_Management_System
 
         private void pendingFir_Click(object sender, EventArgs e)
         {
-            RunningFIR rf = new RunningFIR("Pending FIR's");
-            this.Hide();
-            rf.ShowDialog();
-            this.Close();
+            if(role == 1)
+            {
+                MessageBox.Show("you're not given authority to access these things! ");
+            }
+
+            else
+            {
+                RunningFIR rf = new RunningFIR("Pending FIR's");
+                this.Hide();
+                rf.ShowDialog();
+                this.Close();
+            }
+            
         }
 
         private void deletedFir_Click(object sender, EventArgs e)
         {
-            RunningFIR rf = new RunningFIR("Deleted FIR's");
-            this.Hide();
-            rf.ShowDialog();
-            this.Close();
+            if (role == 1)
+            {
+                MessageBox.Show("you're not given authority to access these things! ");
+            }
+
+            else
+            {
+                RunningFIR rf = new RunningFIR("Deleted FIR's");
+                this.Hide();
+                rf.ShowDialog();
+                this.Close();
+            }
         }
 
         private void completedFir_Click(object sender, EventArgs e)
         {
-            RunningFIR rf = new RunningFIR("Completed FIR's");
-            this.Hide();
-            rf.ShowDialog();
-            this.Close();
+            if (role == 1)
+            {
+                MessageBox.Show("you're not given authority to access these things! ");
+            }
+
+            else
+            {
+                RunningFIR rf = new RunningFIR("Comleted FIR's");
+                this.Hide();
+                rf.ShowDialog();
+                this.Close();
+            }
         }
 
         private void signOut_Click(object sender, EventArgs e)

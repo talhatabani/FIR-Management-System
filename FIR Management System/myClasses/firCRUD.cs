@@ -215,6 +215,22 @@ namespace FIR_Management_System.myClasses
             rnFIR.dgv.DataSource = dtRun;
         }
 
+        public void showCitFir(string email)
+        {
+            string query = "SELECT fid, date, (name + ' ' + fname) AS NAME, town FROM fir WHERE (email = '" + email + "' OR cnic = '" + email + "')";
+            SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
+            SqlDataAdapter sda = new SqlDataAdapter(sc);
+            sc.Connection = connectionString.getConnection();
+            DataTable dtRun = new DataTable();
+            sda.Fill(dtRun);
+            rnFIR.dgv.AutoGenerateColumns = false;
+            rnFIR.dgv.Columns[0].DataPropertyName = "fid";
+            rnFIR.dgv.Columns[1].DataPropertyName = "date";
+            rnFIR.dgv.Columns[2].DataPropertyName = "NAME";
+            rnFIR.dgv.Columns[3].DataPropertyName = "town";
+            rnFIR.dgv.DataSource = dtRun;
+        }
+
         public void fillFirForm(int fid, string form)
         {
             FIR_Form ff = new FIR_Form(form);
@@ -278,6 +294,12 @@ namespace FIR_Management_System.myClasses
 
             else if (rf.control.Text == "Completed FIR's")
             {
+                ff.submitBtn.Enabled = false;
+            }
+
+            else if (rf.control.Text == "Citizen FIR's")
+            {
+                ff.submitBtn.Text = "SUBMIT FOR APPROVAL";
                 ff.submitBtn.Enabled = false;
             }
 

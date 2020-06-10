@@ -12,7 +12,8 @@ namespace FIR_Management_System
 {
     public partial class dashboard : Form
     {
-        private int role = users.getRole();
+        private int role = 0;
+        private string email = users.getEmail();
 
         public dashboard()
         {
@@ -58,6 +59,8 @@ namespace FIR_Management_System
         private void generateFIR_Click(object sender, EventArgs e)
         {
             FIR_Form fir = new FIR_Form();
+            fir.email.Text = email;
+            fir.submitBtn.Text = "SUBMIT FOR APPROVAL";
             this.Hide();
             MessageBox.Show("Things you should NOT do:\n"
                             + "\n1-Never file a false complaint or give wrong information to the   police.You can be prosecuted under law for giving wrong information or for misleading the police (Section 182 of the Pakistan Penal Code, 1860).\n"
@@ -74,6 +77,14 @@ namespace FIR_Management_System
             Welcome welcome = new Welcome();
             this.Hide();
             welcome.ShowDialog();
+            this.Close();
+        }
+
+        private void checkFIR_Click(object sender, EventArgs e)
+        {
+            RunningFIR rn = new RunningFIR("Citizen FIR's");
+            this.Hide();
+            rn.ShowDialog();
             this.Close();
         }
     }

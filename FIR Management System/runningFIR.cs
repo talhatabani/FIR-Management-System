@@ -16,6 +16,7 @@ namespace FIR_Management_System
     {
         private int firID;
         private int role = users.getRole();
+        private String email = users.getEmail();
 
         public RunningFIR(string control)
         {
@@ -48,6 +49,12 @@ namespace FIR_Management_System
             else if (control.Text.Equals("Completed FIR's"))
             {
                 fir.showFir(3);
+                dgv.Columns[4].HeaderText = "View Fir";
+            }
+
+            else if (control.Text.Equals("Citizen FIR's"))
+            {
+                fir.showCitFir(email);
                 dgv.Columns[4].HeaderText = "View Fir";
             }
         }
@@ -101,6 +108,11 @@ namespace FIR_Management_System
                 query = "SELECT fid, date, (name + ' ' + fname) AS NAME, town FROM fir WHERE ((NAME LIKE '%" + searchItem + "%') OR (fid LIKE '%" + searchItem + "%')) AND status = 3";
             }
 
+            else if (control.Text.Equals("Completed FIR's"))
+            {
+                query = "SELECT fid, date, (name + ' ' + fname) AS NAME, town FROM fir WHERE ((NAME LIKE '%" + searchItem + "%') OR (fid LIKE '%" + searchItem + "%')) AND email = " + email;
+            }
+        
             SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
             SqlDataAdapter sda = new SqlDataAdapter(sc);
             sc.Connection = connectionString.getConnection();
@@ -111,10 +123,22 @@ namespace FIR_Management_System
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            dashboardPolice dp = new dashboardPolice();
-            this.Hide();
-            dp.ShowDialog();
-            this.Close();
+
+            if (control.Text.Equals("Citizen FIR's"))
+            {
+                dashboard dp = new dashboard();
+                this.Hide();
+                dp.ShowDialog();
+                this.Close();
+            }
+
+            else
+            {
+                dashboardPolice dp = new dashboardPolice();
+                this.Hide();
+                dp.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

@@ -131,8 +131,6 @@
             this.lostItems.Name = "lostItems";
             this.lostItems.Size = new System.Drawing.Size(260, 86);
             this.lostItems.TabIndex = 25;
-            this.lostItems.Text = "Mobile phone along with 20k cash and a hand bag  of pink color  branded of gucci." +
-    "";
             this.lostItems.Enter += new System.EventHandler(this.lostItems_Enter);
             this.lostItems.Leave += new System.EventHandler(this.lostItems_Leave);
             // 
@@ -301,7 +299,6 @@
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(260, 100);
             this.address.TabIndex = 11;
-            this.address.Text = " A-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
             this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.address.Enter += new System.EventHandler(this.address_Enter);
             this.address.Leave += new System.EventHandler(this.address_Leave);
@@ -326,7 +323,6 @@
             this.cellno.Name = "cellno";
             this.cellno.Size = new System.Drawing.Size(405, 23);
             this.cellno.TabIndex = 9;
-            this.cellno.Text = "0300-1234567";
             this.cellno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cellno.Enter += new System.EventHandler(this.cellno_Enter);
             this.cellno.Leave += new System.EventHandler(this.cellno_Leave);
@@ -352,7 +348,6 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(405, 27);
             this.email.TabIndex = 7;
-            this.email.Text = "someone@example.com";
             this.email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.email.Enter += new System.EventHandler(this.email_Enter);
             this.email.Leave += new System.EventHandler(this.email_Leave);
@@ -378,7 +373,6 @@
             this.cnic.Name = "cnic";
             this.cnic.Size = new System.Drawing.Size(404, 25);
             this.cnic.TabIndex = 5;
-            this.cnic.Text = "00000-0000000-0";
             this.cnic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.cnic.Enter += new System.EventHandler(this.cnic_Enter);
             this.cnic.Leave += new System.EventHandler(this.cnic_Leave);
@@ -404,7 +398,6 @@
             this.fname.Name = "fname";
             this.fname.Size = new System.Drawing.Size(405, 25);
             this.fname.TabIndex = 3;
-            this.fname.Text = "Someone";
             this.fname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.fname.Enter += new System.EventHandler(this.fname_Enter);
             this.fname.Leave += new System.EventHandler(this.fname_Leave);
@@ -430,7 +423,6 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(404, 25);
             this.name.TabIndex = 1;
-            this.name.Text = "Someone";
             this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.name.Enter += new System.EventHandler(this.name_Enter);
             this.name.Leave += new System.EventHandler(this.name_Leave);
@@ -508,7 +500,6 @@
             this.witnessAddress.Name = "witnessAddress";
             this.witnessAddress.Size = new System.Drawing.Size(176, 73);
             this.witnessAddress.TabIndex = 50;
-            this.witnessAddress.Text = "A-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
             this.witnessAddress.Enter += new System.EventHandler(this.witnessAddress_Enter);
             this.witnessAddress.Leave += new System.EventHandler(this.witnessAddress_Leave);
             // 
@@ -521,7 +512,6 @@
             this.witnessName.Name = "witnessName";
             this.witnessName.Size = new System.Drawing.Size(205, 23);
             this.witnessName.TabIndex = 46;
-            this.witnessName.Text = "Someone";
             this.witnessName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.witnessName.Enter += new System.EventHandler(this.witnessName_Enter);
             this.witnessName.Leave += new System.EventHandler(this.witnessName_Leave);
@@ -561,7 +551,6 @@
             this.witnessRelation.Name = "witnessRelation";
             this.witnessRelation.Size = new System.Drawing.Size(205, 23);
             this.witnessRelation.TabIndex = 48;
-            this.witnessRelation.Text = "Shop Keeper";
             this.witnessRelation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.witnessRelation.Enter += new System.EventHandler(this.witnessRelation_Enter);
             this.witnessRelation.Leave += new System.EventHandler(this.witnessRelation_Leave);
@@ -618,7 +607,6 @@
             this.suspectAddress.Name = "suspectAddress";
             this.suspectAddress.Size = new System.Drawing.Size(176, 73);
             this.suspectAddress.TabIndex = 33;
-            this.suspectAddress.Text = "A-00  block 15/C , 5th Avenue , F-15 , Islamabad.";
             this.suspectAddress.Enter += new System.EventHandler(this.suspectAddress_Enter);
             this.suspectAddress.Leave += new System.EventHandler(this.suspectAddress_Leave);
             // 
@@ -644,7 +632,6 @@
             this.suspectRelation.Name = "suspectRelation";
             this.suspectRelation.Size = new System.Drawing.Size(205, 22);
             this.suspectRelation.TabIndex = 31;
-            this.suspectRelation.Text = "Neighbour\'s Son";
             this.suspectRelation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.suspectRelation.Enter += new System.EventHandler(this.suspectRelation_Enter);
             this.suspectRelation.Leave += new System.EventHandler(this.suspectRelation_Leave);
@@ -671,7 +658,6 @@
             this.suspectName.Name = "suspectName";
             this.suspectName.Size = new System.Drawing.Size(205, 22);
             this.suspectName.TabIndex = 29;
-            this.suspectName.Text = "Someone";
             this.suspectName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.suspectName.Enter += new System.EventHandler(this.suspectName_Enter);
             this.suspectName.Leave += new System.EventHandler(this.suspectName_Leave);
@@ -744,6 +730,7 @@
             this.roleLab.Name = "roleLab";
             this.roleLab.Size = new System.Drawing.Size(0, 17);
             this.roleLab.TabIndex = 26;
+            this.roleLab.Visible = false;
             // 
             // completeBtn
             // 
@@ -771,6 +758,7 @@
             this.controlText.Size = new System.Drawing.Size(32, 17);
             this.controlText.TabIndex = 28;
             this.controlText.Text = "aaa";
+            this.controlText.Visible = false;
             // 
             // deleteBtn
             // 
@@ -795,6 +783,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoScrollMargin = new System.Drawing.Size(0, 20);
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(989, 758);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.controlText);

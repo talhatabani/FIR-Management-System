@@ -44,10 +44,6 @@ namespace FIR_Management_System
             signup.ShowDialog();
             this.Close();
         }
-
-        //public static void closeLoginCitizen()
-        //{
         
-        //}
     }
 }
