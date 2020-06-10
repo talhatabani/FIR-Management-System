@@ -30,9 +30,9 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.policePortal = new System.Windows.Forms.Button();
+            this.generateFIR = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.logOutBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +41,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(94)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(4, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(488, 67);
             this.panel2.TabIndex = 6;
@@ -60,19 +60,19 @@
             this.label2.Text = "Welcome To Sindh Citizen Portal";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // policePortal
+            // generateFIR
             // 
-            this.policePortal.BackColor = System.Drawing.Color.Green;
-            this.policePortal.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.policePortal.ForeColor = System.Drawing.Color.White;
-            this.policePortal.Location = new System.Drawing.Point(113, 90);
-            this.policePortal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.policePortal.Name = "policePortal";
-            this.policePortal.Size = new System.Drawing.Size(255, 58);
-            this.policePortal.TabIndex = 7;
-            this.policePortal.Text = "Generate FIR";
-            this.policePortal.UseVisualStyleBackColor = false;
-            this.policePortal.Click += new System.EventHandler(this.policePortal_Click);
+            this.generateFIR.BackColor = System.Drawing.Color.Green;
+            this.generateFIR.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.generateFIR.ForeColor = System.Drawing.Color.White;
+            this.generateFIR.Location = new System.Drawing.Point(113, 90);
+            this.generateFIR.Margin = new System.Windows.Forms.Padding(2);
+            this.generateFIR.Name = "generateFIR";
+            this.generateFIR.Size = new System.Drawing.Size(255, 58);
+            this.generateFIR.TabIndex = 7;
+            this.generateFIR.Text = "Generate FIR";
+            this.generateFIR.UseVisualStyleBackColor = false;
+            this.generateFIR.Click += new System.EventHandler(this.generateFIR_Click);
             // 
             // button1
             // 
@@ -80,34 +80,35 @@
             this.button1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(113, 176);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(255, 58);
             this.button1.TabIndex = 8;
             this.button1.Text = "Check FIR Progress";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // logOutBtn
             // 
-            this.button4.BackColor = System.Drawing.Color.Green;
-            this.button4.BackgroundImage = global::FIR_Management_System.Properties.Resources.logout1;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(173, 262);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(122, 110);
-            this.button4.TabIndex = 17;
-            this.button4.UseVisualStyleBackColor = false;
+            this.logOutBtn.BackColor = System.Drawing.Color.Green;
+            this.logOutBtn.BackgroundImage = global::FIR_Management_System.Properties.Resources.logout1;
+            this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logOutBtn.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
+            this.logOutBtn.ForeColor = System.Drawing.Color.White;
+            this.logOutBtn.Location = new System.Drawing.Point(173, 262);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(122, 110);
+            this.logOutBtn.TabIndex = 17;
+            this.logOutBtn.UseVisualStyleBackColor = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 409);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.policePortal);
+            this.Controls.Add(this.generateFIR);
             this.Controls.Add(this.panel2);
             this.Name = "dashboard";
             this.Text = "dashboard";
@@ -122,8 +123,8 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button policePortal;
+        private System.Windows.Forms.Button generateFIR;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button logOutBtn;
     }
 }

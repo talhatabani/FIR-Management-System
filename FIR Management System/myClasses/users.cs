@@ -96,23 +96,23 @@ namespace FIR_Management_System
             }
         }
 
-        public void successful(bool status, int role)
-        {
-            if(status == true)
-            {
-                MessageBox.Show("Login Successful!");
-                dashboardPolice ds = new dashboardPolice();
-                loginPanelPolice lp = new loginPanelPolice();
-                lp.Hide();
-                ds.ShowDialog();
-                lp.Close();
-            }
+        //public void successful(bool status, int role)
+        //{
+        //    if(status == true)
+        //    {
+        //        MessageBox.Show("Login Successful!");
+        //        dashboardPolice ds = new dashboardPolice();
+        //        loginPanelPolice lp = new loginPanelPolice();
+        //        lp.Hide();
+        //        ds.ShowDialog();
+        //        lp.Close();
+        //    }
 
-            else
-            {
-                MessageBox.Show("Login Failed!");
-            }
-        }
+        //    else
+        //    {
+        //        MessageBox.Show("Login Failed!");
+        //    }
+        //}
 
         //public bool successful(bool status)
         //{
@@ -130,32 +130,46 @@ namespace FIR_Management_System
 
     public class constable : users
     {
+        private bool status;
         public constable(String userName, String password, int role) : base(userName, password)
         {
             users.setRole(role);
-            bool status = base.loginCheck(userName, password, users.getRole());
-            base.successful(status, role);
+        }
+
+        public bool log(String userName, String password, int role)
+        {
+            this.status = base.loginCheck(userName, password, 1);
+            return status;
         }
     }
 
     public class dsp : users
     {
-
+        private bool status;
         public dsp(String userName, String password, int role) : base(userName, password)
         {
             users.setRole(role);
-            bool status = base.loginCheck(userName, password, users.getRole());
-            base.successful(status, role);
+        }
+
+        public bool log(String userName, String password, int role)
+        {
+            this.status = base.loginCheck(userName, password, 2);
+            return status;
         }
     }
 
     public class comissioner : users
     {
+        private bool status;
         public comissioner(String userName, String password, int role) : base(userName, password)
         {
             users.setRole(role);
-            bool status = base.loginCheck(userName, password, users.getRole());
-            base.successful(status, role);
+        }
+
+        public bool log(String userName, String password, int role)
+        {
+            this.status = base.loginCheck(userName, password, 3);
+            return status;
         }
     }
 

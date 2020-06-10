@@ -23,7 +23,6 @@ namespace FIR_Management_System
             bool status = cs.log(cnicBox.Text, passwordBox.Text);
             if(status == true)
             {
-                
                 dashboard ds = new dashboard();
                 this.Hide();
                 ds.ShowDialog();
@@ -33,6 +32,8 @@ namespace FIR_Management_System
             else
             {
                 MessageBox.Show("Login Failed!");
+                cnicBox.Text = null;
+                passwordBox.Text = null;
             }
         }
 

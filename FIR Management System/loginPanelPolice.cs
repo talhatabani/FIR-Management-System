@@ -19,27 +19,41 @@ namespace FIR_Management_System
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+            bool status = false;
+
             if (role.Text.Equals("Constable"))
             {
                 constable cs = new constable(username.Text, password.Text, 1);
-                //MessageBox.Show("Constable  " + cs.successful()); 
+                status = cs.log(username.Text, password.Text, 1);
             }
 
             else if (role.Text.Equals("DSP"))
             {
-                dsp cs = new dsp(username.Text, password.Text, 2);
-                //MessageBox.Show("DSP  " + cs.successful());
+                dsp dn = new dsp(username.Text, password.Text, 2);
+                status = dn.log(username.Text, password.Text, 2);
             }
 
             else
             {
-
-                comissioner cs = new comissioner(username.Text, password.Text, 3);
-                
-                //MessageBox.Show("Comissioner  " +  cs.successful());
+                comissioner cn = new comissioner(username.Text, password.Text, 3);
+                status = cn.log(username.Text, password.Text, 3);
             }
-            this.Hide();
-            this.Close();
+            
+            dashboardPolice ds = new dashboardPolice();
+
+            if (status == true)
+            {
+                this.Hide();
+                ds.ShowDialog();
+                this.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Login Failed!");
+                username.Text = null;
+                password.Text = null;
+            }
         }
         
 
