@@ -114,23 +114,18 @@ namespace FIR_Management_System
             }
         }
 
-        public void successful(bool status)
-        {
-            if (status == true)
-            {
-                MessageBox.Show("Login Successful!");
-                dashboard ds = new dashboard();
-                loginPanelCitizen lpc = new loginPanelCitizen();
-                lpc.Hide();
-                ds.ShowDialog();
-                lpc.Close();
-            }
-
-            else
-            {
-                MessageBox.Show("Login Failed!");
-            }
-        }
+        //public bool successful(bool status)
+        //{
+        //    if (status == true)
+        //    {
+        //        MessageBox.Show("Login Successful!");
+        //        loginPanelCitizen.closeLoginCitizen();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Login Failed!");
+        //    }
+        //}
     }
 
     public class constable : users
@@ -166,10 +161,16 @@ namespace FIR_Management_System
 
     public class citizen : users
     {
+        bool status;
         public citizen(String email, String pass) : base(email, pass)
         {
-            bool status = base.loginCheck(email, pass);
-            base.successful(status);
+            
+        }
+
+        public bool log(String email, String pass)
+        {
+            this.status = base.loginCheck(email, pass);
+            return status;
         }
     }
 }

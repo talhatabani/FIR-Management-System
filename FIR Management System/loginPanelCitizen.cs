@@ -20,11 +20,20 @@ namespace FIR_Management_System
         private void loginBtn_Click(object sender, EventArgs e)
         {
             citizen cs = new citizen(cnicBox.Text, passwordBox.Text);
+            bool status = cs.log(cnicBox.Text, passwordBox.Text);
+            if(status == true)
+            {
+                
+                dashboard ds = new dashboard();
+                this.Hide();
+                ds.ShowDialog();
+                this.Close();
+            }
 
-            FIR_Form fir = new FIR_Form();
-            this.Hide();
-            fir.ShowDialog();
-            this.Close();
+            else
+            {
+                MessageBox.Show("Login Failed!");
+            }
         }
 
         private void signupBtn_Click(object sender, EventArgs e)
@@ -34,5 +43,10 @@ namespace FIR_Management_System
             signup.ShowDialog();
             this.Close();
         }
+
+        //public static void closeLoginCitizen()
+        //{
+        
+        //}
     }
 }
