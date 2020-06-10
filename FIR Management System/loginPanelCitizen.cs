@@ -34,6 +34,7 @@ namespace FIR_Management_System
                 MessageBox.Show("Login Failed!");
                 cnicBox.Text = null;
                 passwordBox.Text = null;
+                cnicBox.Focus();
             }
         }
 
@@ -44,6 +45,22 @@ namespace FIR_Management_System
             signup.ShowDialog();
             this.Close();
         }
-        
+
+        private void cnicBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (e.KeyCode == Keys.Enter)
+                    SendKeys.Send("{TAB}");
+            }
+        }
+
+        private void passwordBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                loginBtn_Click(sender, e);
+            }
+        }
     }
 }

@@ -191,7 +191,7 @@
             this.Controls.Add(this.label3);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RunningFIR";
-            this.Text = "runningFIR";
+            this.Text = "FIR Management System";
             this.Load += new System.EventHandler(this.runningFIR_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

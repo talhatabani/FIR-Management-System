@@ -70,6 +70,12 @@
     <Compile Include="FIR List.Designer.cs">
       <DependentUpon>FIR List.cs</DependentUpon>
     </Compile>
+    <Compile Include="loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="loader.Designer.cs">
+      <DependentUpon>loader.cs</DependentUpon>
+    </Compile>
     <Compile Include="loginPanelCitizen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FIR List.resx">
       <DependentUpon>FIR List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loader.resx">
+      <DependentUpon>loader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="loginPanelCitizen.resx">
       <DependentUpon>loginPanelCitizen.cs</DependentUpon>

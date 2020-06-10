@@ -53,6 +53,7 @@ namespace FIR_Management_System
                 MessageBox.Show("Login Failed!");
                 username.Text = null;
                 password.Text = null;
+                username.Focus();
             }
         }
         
@@ -69,20 +70,29 @@ namespace FIR_Management_System
                 users us = new users();
                 bool status = us.signupEnabled(username.Text, password.Text);
                 if (status == true)
+                {
                     signupBtn.Enabled = true;
+                    signupBtn.BackColor = Color.DarkGreen;
+                }
+
                 else
-                    signupBtn.Enabled = false;           
+                {
+                    signupBtn.Enabled = false;
+                    signupBtn.BackColor = Color.Maroon;
+                }         
             }
 
             else
             {
                 signupBtn.Enabled = false;
+                signupBtn.BackColor = Color.Maroon;
             }
         }
 
         private void loginPanelPolice_Load(object sender, EventArgs e)
         {
             signupBtn.Enabled = false;
+            role.SelectedIndex = 0;
         }
 
         private void signupBtn_Click(object sender, EventArgs e)
@@ -98,6 +108,15 @@ namespace FIR_Management_System
         {
             if(e.KeyCode == Keys.Enter)
                 SendKeys.Send("{TAB}");
+        }
+
+        private void password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (e.KeyCode == Keys.Enter)
+                    SendKeys.Send("{TAB}");
+            }
         }
     }
 }

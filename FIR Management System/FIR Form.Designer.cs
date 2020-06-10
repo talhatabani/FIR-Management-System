@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lostItems = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -79,9 +80,11 @@
             this.completeBtn = new System.Windows.Forms.Button();
             this.controlText = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -131,8 +134,6 @@
             this.lostItems.Name = "lostItems";
             this.lostItems.Size = new System.Drawing.Size(260, 86);
             this.lostItems.TabIndex = 25;
-            this.lostItems.Enter += new System.EventHandler(this.lostItems_Enter);
-            this.lostItems.Leave += new System.EventHandler(this.lostItems_Leave);
             // 
             // label14
             // 
@@ -180,6 +181,7 @@
             this.incidentDet.Name = "incidentDet";
             this.incidentDet.Size = new System.Drawing.Size(456, 153);
             this.incidentDet.TabIndex = 21;
+            this.incidentDet.Validating += new System.ComponentModel.CancelEventHandler(this.incidentDet_Validating);
             // 
             // label13
             // 
@@ -201,6 +203,7 @@
             this.location.Name = "location";
             this.location.Size = new System.Drawing.Size(233, 24);
             this.location.TabIndex = 19;
+            this.location.Validating += new System.ComponentModel.CancelEventHandler(this.location_Validating);
             // 
             // label11
             // 
@@ -219,7 +222,7 @@
             this.label10.AutoSize = true;
             this.label10.Cursor = System.Windows.Forms.Cursors.Default;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(125, 249);
+            this.label10.Location = new System.Drawing.Point(134, 249);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 17);
@@ -231,7 +234,7 @@
             this.time.CustomFormat = "yyyy-mm-dd";
             this.time.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.time.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.time.Location = new System.Drawing.Point(128, 278);
+            this.time.Location = new System.Drawing.Point(137, 278);
             this.time.Margin = new System.Windows.Forms.Padding(4);
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(84, 23);
@@ -256,7 +259,7 @@
             this.date.Location = new System.Drawing.Point(15, 278);
             this.date.Margin = new System.Windows.Forms.Padding(4);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(81, 23);
+            this.date.Size = new System.Drawing.Size(105, 23);
             this.date.TabIndex = 14;
             // 
             // town
@@ -300,8 +303,7 @@
             this.address.Size = new System.Drawing.Size(260, 100);
             this.address.TabIndex = 11;
             this.address.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.address.Enter += new System.EventHandler(this.address_Enter);
-            this.address.Leave += new System.EventHandler(this.address_Leave);
+            this.address.Validating += new System.ComponentModel.CancelEventHandler(this.address_Validating);
             // 
             // label7
             // 
@@ -324,8 +326,7 @@
             this.cellno.Size = new System.Drawing.Size(405, 23);
             this.cellno.TabIndex = 9;
             this.cellno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cellno.Enter += new System.EventHandler(this.cellno_Enter);
-            this.cellno.Leave += new System.EventHandler(this.cellno_Leave);
+            this.cellno.Validating += new System.ComponentModel.CancelEventHandler(this.cellno_Validating);
             // 
             // label6
             // 
@@ -349,8 +350,7 @@
             this.email.Size = new System.Drawing.Size(405, 27);
             this.email.TabIndex = 7;
             this.email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.email.Enter += new System.EventHandler(this.email_Enter);
-            this.email.Leave += new System.EventHandler(this.email_Leave);
+            this.email.Validating += new System.ComponentModel.CancelEventHandler(this.email_Validating);
             // 
             // label4
             // 
@@ -374,8 +374,7 @@
             this.cnic.Size = new System.Drawing.Size(404, 25);
             this.cnic.TabIndex = 5;
             this.cnic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cnic.Enter += new System.EventHandler(this.cnic_Enter);
-            this.cnic.Leave += new System.EventHandler(this.cnic_Leave);
+            this.cnic.Validating += new System.ComponentModel.CancelEventHandler(this.cnic_Validating);
             // 
             // label5
             // 
@@ -399,8 +398,7 @@
             this.fname.Size = new System.Drawing.Size(405, 25);
             this.fname.TabIndex = 3;
             this.fname.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.fname.Enter += new System.EventHandler(this.fname_Enter);
-            this.fname.Leave += new System.EventHandler(this.fname_Leave);
+            this.fname.Validating += new System.ComponentModel.CancelEventHandler(this.fname_Validating);
             // 
             // label3
             // 
@@ -424,8 +422,7 @@
             this.name.Size = new System.Drawing.Size(404, 25);
             this.name.TabIndex = 1;
             this.name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.name.Enter += new System.EventHandler(this.name_Enter);
-            this.name.Leave += new System.EventHandler(this.name_Leave);
+            this.name.Validating += new System.ComponentModel.CancelEventHandler(this.name_Validating);
             // 
             // label2
             // 
@@ -500,8 +497,6 @@
             this.witnessAddress.Name = "witnessAddress";
             this.witnessAddress.Size = new System.Drawing.Size(176, 73);
             this.witnessAddress.TabIndex = 50;
-            this.witnessAddress.Enter += new System.EventHandler(this.witnessAddress_Enter);
-            this.witnessAddress.Leave += new System.EventHandler(this.witnessAddress_Leave);
             // 
             // witnessName
             // 
@@ -513,8 +508,6 @@
             this.witnessName.Size = new System.Drawing.Size(205, 23);
             this.witnessName.TabIndex = 46;
             this.witnessName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.witnessName.Enter += new System.EventHandler(this.witnessName_Enter);
-            this.witnessName.Leave += new System.EventHandler(this.witnessName_Leave);
             // 
             // label16
             // 
@@ -552,8 +545,6 @@
             this.witnessRelation.Size = new System.Drawing.Size(205, 23);
             this.witnessRelation.TabIndex = 48;
             this.witnessRelation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.witnessRelation.Enter += new System.EventHandler(this.witnessRelation_Enter);
-            this.witnessRelation.Leave += new System.EventHandler(this.witnessRelation_Leave);
             // 
             // witness
             // 
@@ -607,8 +598,6 @@
             this.suspectAddress.Name = "suspectAddress";
             this.suspectAddress.Size = new System.Drawing.Size(176, 73);
             this.suspectAddress.TabIndex = 33;
-            this.suspectAddress.Enter += new System.EventHandler(this.suspectAddress_Enter);
-            this.suspectAddress.Leave += new System.EventHandler(this.suspectAddress_Leave);
             // 
             // label19
             // 
@@ -633,8 +622,6 @@
             this.suspectRelation.Size = new System.Drawing.Size(205, 22);
             this.suspectRelation.TabIndex = 31;
             this.suspectRelation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suspectRelation.Enter += new System.EventHandler(this.suspectRelation_Enter);
-            this.suspectRelation.Leave += new System.EventHandler(this.suspectRelation_Leave);
             // 
             // label18
             // 
@@ -659,8 +646,6 @@
             this.suspectName.Size = new System.Drawing.Size(205, 22);
             this.suspectName.TabIndex = 29;
             this.suspectName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.suspectName.Enter += new System.EventHandler(this.suspectName_Enter);
-            this.suspectName.Leave += new System.EventHandler(this.suspectName_Leave);
             // 
             // label17
             // 
@@ -778,6 +763,10 @@
             this.deleteBtn.Visible = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // FIR_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -804,6 +793,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -862,5 +852,6 @@
         public System.Windows.Forms.Button completeBtn;
         private System.Windows.Forms.Label controlText;
         public System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

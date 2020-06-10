@@ -34,8 +34,11 @@ namespace FIR_Management_System
 
         private void FIR_Form_Load(object sender, EventArgs e)
         {
-            suspect.SelectedIndex = 1;
-            witness.SelectedIndex = 1;
+            suspect.SelectedIndex = 0;
+            witness.SelectedIndex = 0;
+            weapon.SelectedIndex = 0;
+            town.SelectedIndex = 0;
+
             roleLab.Text = role.ToString();
 
             if((role == 1 && controlText.Text.Equals("aaa")) || (role == 0 && controlText.Text.Equals("aaa")))
@@ -195,265 +198,6 @@ namespace FIR_Management_System
             }
         }
 
-        private void name_Enter(object sender, EventArgs e)
-        {
-            if(name.Text == "Someone"){
-                name.Text = "";
-
-                name.ForeColor = Color.Black; 
-            }
-        }
-
-        private void name_Leave(object sender, EventArgs e)
-        {
-            if (name.Text == "")
-            {
-                name.Text = "Someone";
-
-                name.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void fname_Enter(object sender, EventArgs e)
-        {
-            if (fname.Text == "Someone")
-            {
-                fname.Text = "";
-
-                fname.ForeColor = Color.Black;
-            }
-        }
-
-        private void fname_Leave(object sender, EventArgs e)
-        {
-            if (fname.Text == "")
-            {
-                fname.Text = "Someone";
-
-                fname.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void cnic_Enter(object sender, EventArgs e)
-        {
-            if (cnic.Text == "00000-0000000-0")
-            {
-                cnic.Text = "";
-
-                cnic.ForeColor = Color.Black;
-            }
-        }
-
-        private void cnic_Leave(object sender, EventArgs e)
-        {
-            if (cnic.Text == "")
-            {
-                cnic.Text = "00000-0000000-0";
-
-                cnic.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void email_Enter(object sender, EventArgs e)
-        {
-            if (email.Text == "someone@example.com")
-            {
-                email.Text = "";
-
-                email.ForeColor = Color.Black;
-            }
-        }
-
-        private void email_Leave(object sender, EventArgs e)
-        {
-            if (email.Text == "")
-            {
-                email.Text = "someone@example.com";
-
-                email.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void cellno_Enter(object sender, EventArgs e)
-        {
-            if (cellno.Text == "0300-1234567")
-            {
-                cellno.Text = "";
-
-                cellno.ForeColor = Color.Black;
-            }
-        }
-
-        private void cellno_Leave(object sender, EventArgs e)
-        {
-            if (cellno.Text == "")
-            {
-                cellno.Text = "0300-1234567";
-
-                cellno.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void address_Enter(object sender, EventArgs e)
-        {
-            if (address.Text == "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
-            {
-                address.Text = "";
-
-                address.ForeColor = Color.Black;
-            }
-        }
-
-        private void address_Leave(object sender, EventArgs e)
-        {
-            if (address.Text == "")
-            {
-                address.Text = "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
-
-                address.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void lostItems_Enter(object sender, EventArgs e)
-        {
-            if (lostItems.Text == "Mobile phone along with 20k cash and a hand bag  of pink color branded of gucci.")
-            {
-                lostItems.Text = "";
-
-                lostItems.ForeColor = Color.Black;
-            }
-        }
-
-        private void lostItems_Leave(object sender, EventArgs e)
-        {
-            if (lostItems.Text == "") 
-            {
-                lostItems.Text = "Mobile phone along with 20k cash and a hand bag  of pink color branded of gucci."; 
-
-                lostItems.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void suspectName_Enter(object sender, EventArgs e)
-        {
-            if (suspectName.Text == "Someone")
-            {
-                suspectName.Text = "";
-
-                suspectName.ForeColor = Color.Black;
-            }
-        }
-
-        private void suspectName_Leave(object sender, EventArgs e)
-        {
-            if (suspectName.Text == "")
-            {
-                suspectName.Text = "Someone";
-
-                suspectName.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void suspectRelation_Enter(object sender, EventArgs e)
-        {
-            if (suspectRelation.Text == "Neighbour's Son")
-            {
-                suspectRelation.Text = "";
-
-                suspectRelation.ForeColor = Color.Black;
-            }
-        }
-
-        private void suspectRelation_Leave(object sender, EventArgs e)
-        {
-            if (suspectRelation.Text == "")
-            {
-                suspectRelation.Text = "Neighbour's Son";
-
-                suspectRelation.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void suspectAddress_Enter(object sender, EventArgs e)
-        {
-            if(address.Text == "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.")
-            {
-                address.Text = "";
-
-                address.ForeColor = Color.Black;
-            }
-        }
-
-        private void suspectAddress_Leave(object sender, EventArgs e)
-        {
-            if (address.Text == "")
-            {
-                address.Text = "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
-
-                address.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void witnessName_Enter(object sender, EventArgs e)
-        {
-            if (witnessName.Text == "Someone")
-            {
-                witnessName.Text = "";
-
-                witnessName.ForeColor = Color.Black;
-            }
-        }
-
-        private void witnessName_Leave(object sender, EventArgs e)
-        {
-            if (witnessName.Text == "")
-            {
-                witnessName.Text = "Someone";
-
-                witnessName.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void witnessRelation_Enter(object sender, EventArgs e)
-        {
-            if (witnessRelation.Text == "Shop Keeper")
-            {
-                witnessRelation.Text = "";
-
-                witnessRelation.ForeColor = Color.Black;
-            }
-        }
-
-        private void witnessRelation_Leave(object sender, EventArgs e)
-        {
-            if (witnessRelation.Text == "")
-            {
-                witnessRelation.Text = "Shop Keeper";
-
-                witnessRelation.ForeColor = Color.DarkGray;
-            }
-        }
-
-        private void witnessAddress_Enter(object sender, EventArgs e)
-        {
-            if (witnessAddress.Text.Equals("A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad."))
-            {
-                witnessAddress.Text = "";
-
-                witnessAddress.ForeColor = Color.Black;
-            }
-        }
-
-        private void witnessAddress_Leave(object sender, EventArgs e)
-        {
-            if (witnessAddress.Text == "")
-            {
-                witnessAddress.Text = "A - 00  block 15 / C , 5th Avenue, F-15 , Islamabad.";
-
-                witnessAddress.ForeColor = Color.DarkGray;
-            }
-        }
-
         private void suspect_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(suspect.SelectedIndex == 1)
@@ -488,6 +232,25 @@ namespace FIR_Management_System
             }
         }
 
+        private void completeBtn_Click(object sender, EventArgs e)
+        {
+            fc.completeFIR(fid);
+            RunningFIR rf = new RunningFIR("Running FIR's");
+            this.Hide();
+            rf.ShowDialog();
+            this.Close();
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            fc.deleteFIR(fid);
+            RunningFIR rf = new RunningFIR("Pending FIR's");
+            this.Hide();
+            rf.ShowDialog();
+            this.Close();
+        }
+
+
         public void firFormTxtEnabled(bool status)
         {
             name.Enabled = status;
@@ -513,7 +276,6 @@ namespace FIR_Management_System
             witnessAddress.Enabled = status;
             submitBtn.Enabled = status;
         }
-
         public void firFormTxtColorBlack()
         {
             name.ForeColor = Color.Black;
@@ -540,22 +302,133 @@ namespace FIR_Management_System
             submitBtn.ForeColor = Color.Black;
         }
 
-        private void completeBtn_Click(object sender, EventArgs e)
+        private void name_Validating(object sender, CancelEventArgs e)
         {
-            fc.completeFIR(fid);
-            RunningFIR rf = new RunningFIR("Running FIR's");
-            this.Hide();
-            rf.ShowDialog();
-            this.Close();
+            if (string.IsNullOrWhiteSpace(name.Text))
+            {
+                e.Cancel = true;
+                name.Focus();
+                errorProvider.SetError(name, "Name should not be left blank!");
+            }
+
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(name, "");
+            }
         }
 
-        private void deleteBtn_Click(object sender, EventArgs e)
+        private void fname_Validating(object sender, CancelEventArgs e)
         {
-            fc.deleteFIR(fid);
-            RunningFIR rf = new RunningFIR("Pending FIR's");
-            this.Hide();
-            rf.ShowDialog();
-            this.Close();
+            if (string.IsNullOrWhiteSpace(fname.Text))
+            {
+                e.Cancel = true;
+                fname.Focus();
+                errorProvider.SetError(fname, "Father / Husband Name should not be left blank!");
+            }
+
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(fname, "");
+            }
         }
+
+        private void cnic_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cnic.Text))
+            {
+                e.Cancel = true;
+                cnic.Focus();
+                errorProvider.SetError(cnic, "Cnic should not be left blank!");
+            }
+
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(cnic, "");
+            }
+        }
+
+        private void email_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(email.Text))
+            {
+                e.Cancel = true;
+                email.Focus();
+                errorProvider.SetError(email, "Email should not be left blank!");
+            }
+
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(email, "");
+            }
+        }
+
+        private void cellno_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(cellno.Text))
+            {
+                e.Cancel = true;
+                cellno.Focus();
+                errorProvider.SetError(cellno, "Cell No# should not be left blank!");
+            }
+
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(cellno, "");
+            }
+        }
+
+        private void address_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(address.Text))
+            {
+                e.Cancel = true;
+                address.Focus();
+                errorProvider.SetError(address, "Address should not be left blank!");
+            }
+
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(address, "");
+            }
+        }
+
+        private void location_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(location.Text))
+            {
+                e.Cancel = true;
+                location.Focus();
+                errorProvider.SetError(location, "Name should not be left blank!");
+            }
+
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(location, "");
+            }
+        }
+
+        private void incidentDet_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(incidentDet.Text))
+            {
+                e.Cancel = true;
+                incidentDet.Focus();
+                errorProvider.SetError(incidentDet, "Incident Detail should not be left blank!");
+            }
+
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(incidentDet, "");
+            }
+        }
+        
     }
 }

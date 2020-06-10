@@ -11,7 +11,66 @@ using System.Drawing;
 
 namespace FIR_Management_System.myClasses
 {
-    class firCRUD
+    interface firMain
+    {
+        string FIRCount(int status);
+
+        void saveFIR(
+                    string name,
+                    string fname,
+                    string cnic,
+                    string email,
+                    long cellno,
+                    string address,
+                    string town,
+                    DateTime date,
+                    DateTime time,
+                    string location,
+                    string incidentDet,
+                    string lostItems,
+                    string weapon,
+                    string suspect,
+                    string suspectName,
+                    string suspectRelation,
+                    string suspectAddress,
+                    string witness,
+                    string witnessName,
+                    string witnessRelation,
+                    string witnessAddress
+          );
+
+        void updateFIR(
+                    int fid,
+                    string name,
+                    string fname,
+                    string cnic,
+                    string email,
+                    long cellno,
+                    string address,
+                    string town,
+                    DateTime date,
+                    DateTime time,
+                    string location,
+                    string incidentDet,
+                    string lostItems,
+                    string weapon,
+                    string suspect,
+                    string suspectName,
+                    string suspectRelation,
+                    string suspectAddress,
+                    string witness,
+                    string witnessName,
+                    string witnessRelation,
+                    string witnessAddress
+        );
+
+        void fillFirForm(int fid, string form);
+
+        void showFir(int status);
+
+    }
+
+    class firCRUD : firMain
     {
         public RunningFIR rnFIR;
         private int role = users.getRole();

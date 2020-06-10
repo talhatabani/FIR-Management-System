@@ -122,14 +122,16 @@
             // 
             // passwordBox
             // 
-            this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.Location = new System.Drawing.Point(23, 377);
             this.passwordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.passwordBox.Multiline = true;
             this.passwordBox.Name = "passwordBox";
-            this.passwordBox.Size = new System.Drawing.Size(409, 32);
+            this.passwordBox.PasswordChar = '*';
+            this.passwordBox.Size = new System.Drawing.Size(409, 34);
             this.passwordBox.TabIndex = 9;
             this.passwordBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.passwordBox.UseSystemPasswordChar = true;
+            this.passwordBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passwordBox_KeyDown);
             // 
             // label4
             // 
@@ -152,6 +154,7 @@
             this.cnicBox.Size = new System.Drawing.Size(409, 32);
             this.cnicBox.TabIndex = 7;
             this.cnicBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.cnicBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cnicBox_KeyDown);
             // 
             // label3
             // 
