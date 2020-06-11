@@ -35,6 +35,7 @@ namespace FIR_Management_System
 
         }
 
+        
         private void button1_Click(object sender, EventArgs e)
         {
             if (role != 1)
@@ -74,6 +75,7 @@ namespace FIR_Management_System
 
         private void logOutBtn_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("You're Logged Out./nPress ok to go to the Main Page.")
             Welcome welcome = new Welcome();
             this.Hide();
             welcome.ShowDialog();

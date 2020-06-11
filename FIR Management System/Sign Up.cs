@@ -25,6 +25,7 @@ namespace FIR_Management_System
             this.role = role;
         }
 
+        //sending data to data base and feeding them into the table.//
         private void signUpBtn_Click(object sender, EventArgs e)
         {
             SqlCommand sc = new SqlCommand();
@@ -74,6 +75,7 @@ namespace FIR_Management_System
             }
         }
 
+        //if the comissioner is nothen role won't show off.//
         private void Sign_Up_Load(object sender, EventArgs e)
         {
             if (role == 3)

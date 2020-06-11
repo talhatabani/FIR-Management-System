@@ -17,6 +17,7 @@ namespace FIR_Management_System
             InitializeComponent();
         }
 
+        //login checking criteria.//
         private void loginBtn_Click(object sender, EventArgs e)
         {
             bool status = false;
@@ -50,19 +51,14 @@ namespace FIR_Management_System
 
             else
             {
-                MessageBox.Show("Login Failed!");
+                MessageBox.Show("Login Failed!\nUsername or Password or Role is incoorect.");
                 username.Text = null;
                 password.Text = null;
                 username.Focus();
             }
         }
-        
 
-        private void role_TextUpdate(object sender, EventArgs e)
-        {
-
-        }
-
+        //just checking Comissioner login so thatb he can add police officers.//
         private void role_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (role.Text.Equals("Comissioner"))
@@ -79,6 +75,7 @@ namespace FIR_Management_System
                 {
                     signupBtn.Enabled = false;
                     signupBtn.BackColor = Color.Maroon;
+                    MessageBox.Show("Your username or password doesn't match.");
                 }         
             }
 
@@ -92,7 +89,7 @@ namespace FIR_Management_System
         private void loginPanelPolice_Load(object sender, EventArgs e)
         {
             signupBtn.Enabled = false;
-            role.SelectedIndex = 0;
+            role.SelectedIndex = 1;
         }
 
         private void signupBtn_Click(object sender, EventArgs e)
@@ -104,6 +101,7 @@ namespace FIR_Management_System
             this.Close();
         }
 
+        // just a beautify event.//
         private void username_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Enter)

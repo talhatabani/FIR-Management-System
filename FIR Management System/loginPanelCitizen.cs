@@ -31,7 +31,7 @@ namespace FIR_Management_System
 
             else
             {
-                MessageBox.Show("Login Failed!");
+                MessageBox.Show("Login Failed!\nYour Email or Password is incorrect.");
                 cnicBox.Text = null;
                 passwordBox.Text = null;
                 cnicBox.Focus();
@@ -51,7 +51,7 @@ namespace FIR_Management_System
             if (e.KeyCode == Keys.Enter)
             {
                 if (e.KeyCode == Keys.Enter)
-                    SendKeys.Send("{TAB}");
+                    SendKeys.Send("{ENTER}");
             }
         }
 
@@ -59,7 +59,9 @@ namespace FIR_Management_System
         {
             if (e.KeyCode == Keys.Enter)
             {
-                loginBtn_Click(sender, e);
+                //loginBtn_Click(sender, e);
+                if (e.KeyCode == Keys.Enter)
+                    SendKeys.Send("{ENTER}");
             }
         }
 

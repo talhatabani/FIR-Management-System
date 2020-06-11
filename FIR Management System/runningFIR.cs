@@ -39,17 +39,17 @@ namespace FIR_Management_System
                 fir.showFir(2);
                 dgv.Columns[4].HeaderText = "Approve";
             }
+            
+            else if (control.Text.Equals("Completed FIR's"))
+            {
+                fir.showFir(3);
+                dgv.Columns[4].HeaderText = "View Fir";
+            }
 
             else if (control.Text.Equals("Deleted FIR's"))
             {
                 fir.showFir(0);
                 dgv.Columns[4].HeaderText = "Delete";
-            }
-
-            else if (control.Text.Equals("Completed FIR's"))
-            {
-                fir.showFir(3);
-                dgv.Columns[4].HeaderText = "View Fir";
             }
 
             else if (control.Text.Equals("Citizen FIR's"))

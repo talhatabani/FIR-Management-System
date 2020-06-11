@@ -90,7 +90,7 @@ namespace FIR_Management_System
         {
             Welcome wel = new Welcome();
             this.Hide();
-            MessageBox.Show("Logout Successfully");
+            MessageBox.Show("Logout Successfully\nPress ok to go to the Main Page.");
             wel.ShowDialog();
             this.Close();
         }

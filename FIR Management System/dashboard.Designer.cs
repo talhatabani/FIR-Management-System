@@ -40,10 +40,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(94)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(5, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(4, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(651, 82);
+            this.panel2.Size = new System.Drawing.Size(488, 67);
             this.panel2.TabIndex = 6;
             // 
             // label2
@@ -52,9 +52,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(52, 22);
+            this.label2.Location = new System.Drawing.Point(39, 18);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(533, 34);
+            this.label2.Size = new System.Drawing.Size(420, 26);
             this.label2.TabIndex = 2;
             this.label2.Text = "Welcome To Sindh Citizen Portal";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -64,10 +65,10 @@
             this.generateFIR.BackColor = System.Drawing.Color.Green;
             this.generateFIR.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.generateFIR.ForeColor = System.Drawing.Color.White;
-            this.generateFIR.Location = new System.Drawing.Point(151, 111);
-            this.generateFIR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generateFIR.Location = new System.Drawing.Point(113, 90);
+            this.generateFIR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.generateFIR.Name = "generateFIR";
-            this.generateFIR.Size = new System.Drawing.Size(340, 71);
+            this.generateFIR.Size = new System.Drawing.Size(255, 58);
             this.generateFIR.TabIndex = 7;
             this.generateFIR.Text = "Generate FIR";
             this.generateFIR.UseVisualStyleBackColor = false;
@@ -78,10 +79,10 @@
             this.checkFIR.BackColor = System.Drawing.Color.Green;
             this.checkFIR.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
             this.checkFIR.ForeColor = System.Drawing.Color.White;
-            this.checkFIR.Location = new System.Drawing.Point(151, 217);
-            this.checkFIR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkFIR.Location = new System.Drawing.Point(113, 176);
+            this.checkFIR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkFIR.Name = "checkFIR";
-            this.checkFIR.Size = new System.Drawing.Size(340, 71);
+            this.checkFIR.Size = new System.Drawing.Size(255, 58);
             this.checkFIR.TabIndex = 8;
             this.checkFIR.Text = "Check FIR Progress";
             this.checkFIR.UseVisualStyleBackColor = false;
@@ -94,24 +95,22 @@
             this.logOutBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.logOutBtn.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.logOutBtn.ForeColor = System.Drawing.Color.White;
-            this.logOutBtn.Location = new System.Drawing.Point(251, 322);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.logOutBtn.Location = new System.Drawing.Point(188, 262);
             this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(139, 135);
+            this.logOutBtn.Size = new System.Drawing.Size(104, 110);
             this.logOutBtn.TabIndex = 17;
             this.logOutBtn.UseVisualStyleBackColor = false;
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            this.logOutBtn.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 503);
+            this.ClientSize = new System.Drawing.Size(499, 409);
             this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.checkFIR);
             this.Controls.Add(this.generateFIR);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "dashboard";
             this.Text = "dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dashboard_FormClosing);

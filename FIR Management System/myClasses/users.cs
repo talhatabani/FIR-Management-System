@@ -71,9 +71,8 @@ namespace FIR_Management_System
         }
 
         //login for Citizen by USing the concept of polymorphism//
-
         public bool loginCheck(String email, String pass)
-        {
+        {     
             String query = "SELECT COUNT(password) FROM citizens WHERE ((email = '" + email +  "') OR (cnic = '" + email + "')) AND password = '" + pass + "' AND status = 1";
             SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
             SqlDataAdapter sda = new SqlDataAdapter(sc);
