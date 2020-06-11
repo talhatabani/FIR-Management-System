@@ -75,9 +75,9 @@
             this.groupBox1.Controls.Add(this.name);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox1.Location = new System.Drawing.Point(53, 144);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(848, 437);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -98,7 +98,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(25, 146);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(349, 22);
             this.textBox1.TabIndex = 21;
@@ -123,7 +123,7 @@
             this.signUpBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.signUpBtn.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.signUpBtn.Location = new System.Drawing.Point(329, 343);
-            this.signUpBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signUpBtn.Margin = new System.Windows.Forms.Padding(4);
             this.signUpBtn.Name = "signUpBtn";
             this.signUpBtn.Size = new System.Drawing.Size(183, 66);
             this.signUpBtn.TabIndex = 2;
@@ -147,7 +147,7 @@
             // password
             // 
             this.password.Location = new System.Drawing.Point(456, 218);
-            this.password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.password.Margin = new System.Windows.Forms.Padding(4);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(364, 22);
             this.password.TabIndex = 18;
@@ -183,7 +183,7 @@
             // cellno
             // 
             this.cellno.Location = new System.Drawing.Point(456, 146);
-            this.cellno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cellno.Margin = new System.Windows.Forms.Padding(4);
             this.cellno.Name = "cellno";
             this.cellno.Size = new System.Drawing.Size(364, 22);
             this.cellno.TabIndex = 16;
@@ -218,7 +218,7 @@
             // email
             // 
             this.email.Location = new System.Drawing.Point(456, 66);
-            this.email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.email.Margin = new System.Windows.Forms.Padding(4);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(364, 22);
             this.email.TabIndex = 13;
@@ -239,7 +239,7 @@
             // cnic
             // 
             this.cnic.Location = new System.Drawing.Point(25, 289);
-            this.cnic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cnic.Margin = new System.Windows.Forms.Padding(4);
             this.cnic.Name = "cnic";
             this.cnic.Size = new System.Drawing.Size(348, 22);
             this.cnic.TabIndex = 11;
@@ -248,7 +248,7 @@
             // fname
             // 
             this.fname.Location = new System.Drawing.Point(25, 218);
-            this.fname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fname.Margin = new System.Windows.Forms.Padding(4);
             this.fname.Name = "fname";
             this.fname.Size = new System.Drawing.Size(348, 22);
             this.fname.TabIndex = 10;
@@ -269,7 +269,7 @@
             // name
             // 
             this.name.Location = new System.Drawing.Point(24, 69);
-            this.name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.name.Margin = new System.Windows.Forms.Padding(4);
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(349, 22);
             this.name.TabIndex = 8;
@@ -305,9 +305,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sign_Up";
             this.Text = "Sign_Up";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Sign_Up_FormClosing);
             this.Load += new System.EventHandler(this.Sign_Up_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

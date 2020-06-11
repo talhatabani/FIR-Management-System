@@ -786,6 +786,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FIR_Form";
             this.Text = "FIR_Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FIR_Form_FormClosing);
             this.Load += new System.EventHandler(this.FIR_Form_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

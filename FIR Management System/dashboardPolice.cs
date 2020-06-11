@@ -12,7 +12,7 @@ namespace FIR_Management_System
 {
     public partial class dashboardPolice : Form
     {
-        myClasses.firCRUD fc = new myClasses.firCRUD();
+        myClasses.firSindh fc = new myClasses.firSindh();
         private int role = users.getRole();
 
         public dashboardPolice()
@@ -79,7 +79,7 @@ namespace FIR_Management_System
 
             else
             {
-                RunningFIR rf = new RunningFIR("Comleted FIR's");
+                RunningFIR rf = new RunningFIR("Completed FIR's");
                 this.Hide();
                 rf.ShowDialog();
                 this.Close();
@@ -101,6 +101,11 @@ namespace FIR_Management_System
             runningFIRCount.Text = fc.FIRCount(1);
             pendingFIRCount.Text = fc.FIRCount(2);
             completedFIRCount.Text = fc.FIRCount(3);
+        }
+
+        private void dashboardPolice_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

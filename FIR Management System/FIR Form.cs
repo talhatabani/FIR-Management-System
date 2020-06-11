@@ -18,7 +18,7 @@ namespace FIR_Management_System
         public int role = users.getRole();
         public string citEmail = users.getEmail();
 
-        firCRUD fc = new firCRUD();
+        firSindh fc = new firSindh();
 
         public int update = 0;
         public FIR_Form()
@@ -70,9 +70,12 @@ namespace FIR_Management_System
 
             //////////
 
-            else if (citEmail.Equals(email.Text) && role == 0)
+            if(citEmail != null)
             {
-                email.Enabled = false;
+                if (citEmail.Equals(email.Text) && role == 0)
+                {
+                    email.Enabled = false;
+                }
             }
         }
 
@@ -106,9 +109,9 @@ namespace FIR_Management_System
                     witnessAddress.Text
                 );
 
-                RunningFIR rnf = new RunningFIR("Running FIR's");
+                dashboardPolice ds = new dashboardPolice();
                 this.Hide();
-                rnf.ShowDialog();
+                ds.ShowDialog();
                 this.Close();
             }
 
@@ -138,9 +141,9 @@ namespace FIR_Management_System
                     witnessAddress.Text
                );
 
-                RunningFIR rnf = new RunningFIR(controlText.Text);
+                dashboardPolice ds = new dashboardPolice();
                 this.Hide();
-                rnf.ShowDialog();
+                ds.ShowDialog();
                 this.Close();
             }
 
@@ -170,30 +173,36 @@ namespace FIR_Management_System
                     witnessAddress.Text
                );
 
-                RunningFIR rnf = new RunningFIR("Citizen FIR's");
+                dashboard ds = new dashboard();
                 this.Hide();
-                rnf.ShowDialog();
+                ds.ShowDialog();
                 this.Close();
             }
 
             else if (submitBtn.Text.Equals("APPROVE"))
             {
                 fc.approveFIR(fid);
-                RunningFIR rnf = new RunningFIR(controlText.Text);
+                dashboardPolice ds = new dashboardPolice();
+                this.Hide();
+                ds.ShowDialog();
                 this.Close();
             }
 
             else if (submitBtn.Text.Equals("DELETE"))
             {
                 fc.deleteFIR(fid);
-                RunningFIR rnf = new RunningFIR(controlText.Text);
+                dashboardPolice ds = new dashboardPolice();
+                this.Hide();
+                ds.ShowDialog();
                 this.Close();
             }
 
             else if (submitBtn.Text.Equals("RE INVESTIGATE"))
             {
                 fc.reInvestigateFIR(fid);
-                RunningFIR rnf = new RunningFIR(controlText.Text);
+                dashboardPolice ds = new dashboardPolice();
+                this.Hide();
+                ds.ShowDialog();
                 this.Close();
             }
         }
@@ -235,18 +244,18 @@ namespace FIR_Management_System
         private void completeBtn_Click(object sender, EventArgs e)
         {
             fc.completeFIR(fid);
-            RunningFIR rf = new RunningFIR("Running FIR's");
+            dashboardPolice dp = new dashboardPolice();
             this.Hide();
-            rf.ShowDialog();
+            dp.ShowDialog();
             this.Close();
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             fc.deleteFIR(fid);
-            RunningFIR rf = new RunningFIR("Pending FIR's");
+            dashboardPolice dp = new dashboardPolice();
             this.Hide();
-            rf.ShowDialog();
+            dp.ShowDialog();
             this.Close();
         }
 
@@ -429,6 +438,10 @@ namespace FIR_Management_System
                 errorProvider.SetError(incidentDet, "");
             }
         }
-        
+
+        private void FIR_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

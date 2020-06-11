@@ -82,5 +82,10 @@ namespace FIR_Management_System
                 roleBox.Visible = true;
             }
         }
+
+        private void Sign_Up_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

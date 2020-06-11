@@ -87,5 +87,10 @@ namespace FIR_Management_System
             rn.ShowDialog();
             this.Close();
         }
+
+        private void dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

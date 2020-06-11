@@ -213,6 +213,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "loginPanelCitizen";
             this.Text = "loginPanelCitizen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.loginPanelCitizen_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

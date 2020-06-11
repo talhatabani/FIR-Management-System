@@ -62,5 +62,10 @@ namespace FIR_Management_System
                 loginBtn_Click(sender, e);
             }
         }
+
+        private void loginPanelCitizen_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

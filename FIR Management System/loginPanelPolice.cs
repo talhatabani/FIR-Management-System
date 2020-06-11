@@ -118,5 +118,10 @@ namespace FIR_Management_System
                     SendKeys.Send("{TAB}");
             }
         }
+
+        private void loginPanelPolice_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

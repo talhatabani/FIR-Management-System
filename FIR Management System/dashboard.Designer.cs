@@ -95,7 +95,7 @@
             this.logOutBtn.Font = new System.Drawing.Font("Verdana", 10.8F, System.Drawing.FontStyle.Bold);
             this.logOutBtn.ForeColor = System.Drawing.Color.White;
             this.logOutBtn.Location = new System.Drawing.Point(251, 322);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4);
             this.logOutBtn.Name = "logOutBtn";
             this.logOutBtn.Size = new System.Drawing.Size(139, 135);
             this.logOutBtn.TabIndex = 17;
@@ -111,9 +111,10 @@
             this.Controls.Add(this.checkFIR);
             this.Controls.Add(this.generateFIR);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "dashboard";
             this.Text = "dashboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.dashboard_FormClosing);
             this.Load += new System.EventHandler(this.dashboard_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -11,7 +11,7 @@ using System.Drawing;
 
 namespace FIR_Management_System.myClasses
 {
-    interface firMain
+    interface firCRUD
     {
         string FIRCount(int status);
 
@@ -70,12 +70,12 @@ namespace FIR_Management_System.myClasses
 
     }
 
-    class firCRUD : firMain
+    class firSindh : firCRUD
     {
         public RunningFIR rnFIR;
         private int role = users.getRole();
 
-        public firCRUD()
+        public firSindh()
         {
 
         }
@@ -230,34 +230,6 @@ namespace FIR_Management_System.myClasses
             }
         }
 
-        public void completeFIR(int fid)
-        {
-            string query = "UPDATE fir SET status = 3 WHERE fid = " + fid;
-            SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
-            SqlDataAdapter sda = new SqlDataAdapter(sc);
-            sc.Connection = connectionString.getConnection();
-            int rows = sc.ExecuteNonQuery();
-            if (rows > 0)
-            {
-                MessageBox.Show("FIR is Completed!");
-            }
-
-        }
-
-        public void reInvestigateFIR(int fid)
-        {
-            string query = "UPDATE fir SET status = 1 WHERE fid = " + fid;
-            SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
-            SqlDataAdapter sda = new SqlDataAdapter(sc);
-            sc.Connection = connectionString.getConnection();
-            int rows = sc.ExecuteNonQuery();
-            if (rows > 0)
-            {
-                MessageBox.Show("FIR will Re-Investigate!");
-            }
-
-        }
-
         public void showFir(int status)
         {
             string query = "SELECT fid, date, (name + ' ' + fname) AS NAME, town FROM fir WHERE status = " + status;
@@ -294,8 +266,6 @@ namespace FIR_Management_System.myClasses
         {
             FIR_Form ff = new FIR_Form(form);
             RunningFIR rf = new RunningFIR(form);
-
-            rf.Hide();
 
             string query = "SELECT * FROM fir WHERE fid = " + fid;
             SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
@@ -363,7 +333,33 @@ namespace FIR_Management_System.myClasses
             }
 
             ff.ShowDialog();
-            ff.Close();
+        }
+
+        public void completeFIR(int fid)
+        {
+            string query = "UPDATE fir SET status = 3 WHERE fid = " + fid;
+            SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
+            SqlDataAdapter sda = new SqlDataAdapter(sc);
+            sc.Connection = connectionString.getConnection();
+            int rows = sc.ExecuteNonQuery();
+            if (rows > 0)
+            {
+                MessageBox.Show("FIR is Completed!");
+            }
+        }
+
+        public void reInvestigateFIR(int fid)
+        {
+            string query = "UPDATE fir SET status = 1 WHERE fid = " + fid;
+            SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
+            SqlDataAdapter sda = new SqlDataAdapter(sc);
+            sc.Connection = connectionString.getConnection();
+            int rows = sc.ExecuteNonQuery();
+            if (rows > 0)
+            {
+                MessageBox.Show("FIR will Re-Investigate!");
+            }
+
         }
 
         public void approveFIR(int fid)

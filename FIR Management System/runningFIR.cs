@@ -26,7 +26,7 @@ namespace FIR_Management_System
 
         private void runningFIR_Load(object sender, EventArgs e)
         {
-            firCRUD fir = new firCRUD();
+            firSindh fir = new firSindh();
             fir.rnFIR = this;
 
             if(control.Text.Equals("Running FIR's"))
@@ -68,9 +68,12 @@ namespace FIR_Management_System
             {
                 int index = (int) dgv.Rows[e.RowIndex].Cells[0].Value;
                 this.firID = index;
-                firCRUD fir = new firCRUD();
+                firSindh fir = new firSindh();
                 fir.fillFirForm(firID, control.Text);
             }
+
+            RunningFIR rf = new RunningFIR(control.Text);
+            rf.runningFIR_Load(sender, e);
         }
        
         private void searchBox_TextChanged(object sender, EventArgs e)
@@ -80,7 +83,7 @@ namespace FIR_Management_System
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
-            myClasses.firCRUD fc = new firCRUD();
+            myClasses.firSindh fc = new firSindh();
             searchDataRnFir(searchBox.Text);
         }
 
@@ -108,7 +111,7 @@ namespace FIR_Management_System
                 query = "SELECT fid, date, (name + ' ' + fname) AS NAME, town FROM fir WHERE ((NAME LIKE '%" + searchItem + "%') OR (fid LIKE '%" + searchItem + "%')) AND status = 3";
             }
 
-            else if (control.Text.Equals("Completed FIR's"))
+            else if (control.Text.Equals("Citizen FIR's"))
             {
                 query = "SELECT fid, date, (name + ' ' + fname) AS NAME, town FROM fir WHERE ((NAME LIKE '%" + searchItem + "%') OR (fid LIKE '%" + searchItem + "%')) AND email = " + email;
             }
@@ -139,6 +142,11 @@ namespace FIR_Management_System
                 dp.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void RunningFIR_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

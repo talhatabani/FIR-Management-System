@@ -34,5 +34,10 @@ namespace FIR_Management_System
             lpc.ShowDialog();
             this.Close();
         }
+
+        private void Welcome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

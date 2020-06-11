@@ -39,10 +39,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(94)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(2, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(488, 67);
+            this.panel2.Size = new System.Drawing.Size(651, 82);
             this.panel2.TabIndex = 5;
             // 
             // label2
@@ -51,10 +51,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(42, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(56, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(409, 26);
+            this.label2.Size = new System.Drawing.Size(519, 34);
             this.label2.TabIndex = 2;
             this.label2.Text = "Welcome To Sindh Police Portal";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -64,10 +63,10 @@
             this.policePortal.BackColor = System.Drawing.Color.Firebrick;
             this.policePortal.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.policePortal.ForeColor = System.Drawing.Color.White;
-            this.policePortal.Location = new System.Drawing.Point(136, 93);
-            this.policePortal.Margin = new System.Windows.Forms.Padding(2);
+            this.policePortal.Location = new System.Drawing.Point(181, 114);
+            this.policePortal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.policePortal.Name = "policePortal";
-            this.policePortal.Size = new System.Drawing.Size(228, 71);
+            this.policePortal.Size = new System.Drawing.Size(304, 87);
             this.policePortal.TabIndex = 6;
             this.policePortal.Text = "Police Portal ";
             this.policePortal.UseVisualStyleBackColor = false;
@@ -78,10 +77,10 @@
             this.citizenPortal.BackColor = System.Drawing.Color.Firebrick;
             this.citizenPortal.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.citizenPortal.ForeColor = System.Drawing.Color.White;
-            this.citizenPortal.Location = new System.Drawing.Point(136, 180);
-            this.citizenPortal.Margin = new System.Windows.Forms.Padding(2);
+            this.citizenPortal.Location = new System.Drawing.Point(181, 222);
+            this.citizenPortal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.citizenPortal.Name = "citizenPortal";
-            this.citizenPortal.Size = new System.Drawing.Size(228, 71);
+            this.citizenPortal.Size = new System.Drawing.Size(304, 87);
             this.citizenPortal.TabIndex = 7;
             this.citizenPortal.Text = "Citizen Portal ";
             this.citizenPortal.UseVisualStyleBackColor = false;
@@ -89,15 +88,16 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(491, 333);
+            this.ClientSize = new System.Drawing.Size(655, 410);
             this.Controls.Add(this.citizenPortal);
             this.Controls.Add(this.policePortal);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Welcome";
             this.Text = "Welcome";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Welcome_FormClosing);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
