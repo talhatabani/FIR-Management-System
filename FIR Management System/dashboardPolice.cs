@@ -89,6 +89,7 @@ namespace FIR_Management_System
         private void signOut_Click(object sender, EventArgs e)
         {
             Welcome wel = new Welcome();
+            users.setRole(0);
             this.Hide();
             MessageBox.Show("Logout Successfully\nPress ok to go to the Main Page.");
             wel.ShowDialog();

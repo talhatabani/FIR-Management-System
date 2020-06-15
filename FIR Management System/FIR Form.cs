@@ -450,9 +450,41 @@ namespace FIR_Management_System
                 this.Close();
             }
 
-            else
+            else if(controlText.Text.Equals("Running FIR's"))
             {
                 dashboardPolice dp = new dashboardPolice();
+                this.Hide();
+                dp.ShowDialog();
+                this.Close();
+            }
+
+            else if (controlText.Text.Equals("Pending FIR's"))
+            {
+                dashboardPolice dp = new dashboardPolice();
+                this.Hide();
+                dp.ShowDialog();
+                this.Close();
+            }
+
+            else if (controlText.Text.Equals("Completed FIR's"))
+            {
+                dashboardPolice dp = new dashboardPolice();
+                this.Hide();
+                dp.ShowDialog();
+                this.Close();
+            }
+
+            else if (controlText.Text.Equals("Deleted FIR's"))
+            {
+                dashboardPolice dp = new dashboardPolice();
+                this.Hide();
+                dp.ShowDialog();
+                this.Close();
+            }
+
+            else
+            {
+                dashboard dp = new dashboard();
                 this.Hide();
                 dp.ShowDialog();
                 this.Close();

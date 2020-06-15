@@ -53,13 +53,17 @@ namespace FIR_Management_System
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Welcome wel = new Welcome();
+            users.setRole(0);
             this.Hide();
+            MessageBox.Show("Logout Successfully\nPress ok to go to the Main Page.");
             wel.ShowDialog();
+            this.Close();
         }
 
         private void generateFIR_Click(object sender, EventArgs e)
         {
             FIR_Form fir = new FIR_Form();
+            fir.controlText.Text = "aaa";
             fir.email.Text = email;
             fir.submitBtn.Text = "SUBMIT FOR APPROVAL";
             this.Hide();
@@ -75,7 +79,7 @@ namespace FIR_Management_System
 
         private void logOutBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You're Logged Out./nPress ok to go to the Main Page.")
+            MessageBox.Show("You're Logged Out./nPress ok to go to the Main Page.");
             Welcome welcome = new Welcome();
             this.Hide();
             welcome.ShowDialog();

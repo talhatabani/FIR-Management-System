@@ -91,7 +91,7 @@ namespace FIR_Management_System
         //permisssion  granted to the comissioner for adding more officers.//
         public bool signupEnabled(String name, String pass)
         {
-            String query1 = "select Count(uname) from users Where uname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + 3 + "' AND status = 1";
+            String query1 = "select Count(uname) from users Where ufname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + 3 + "' AND status = 1";
             SqlCommand sc1 = new SqlCommand(query1, connectionString.getConnection());
             SqlDataAdapter sda1 = new SqlDataAdapter(sc1);
             int count1 = (int)sc1.ExecuteScalar();

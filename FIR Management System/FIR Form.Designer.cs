@@ -747,7 +747,6 @@
             this.controlText.Size = new System.Drawing.Size(32, 17);
             this.controlText.TabIndex = 28;
             this.controlText.Text = "aaa";
-            this.controlText.Visible = false;
             // 
             // deleteBtn
             // 
