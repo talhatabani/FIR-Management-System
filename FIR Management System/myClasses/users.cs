@@ -55,7 +55,7 @@ namespace FIR_Management_System
         //login for Police Staff by Using the concept of polymorphism//
         public bool loginCheck(String name, String pass, int role)
         {
-            String query = "select Count(uname) from users Where uname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + role + "' AND status = 1";
+            String query = "select Count(uname) from users Where ufname = '" + name + "' AND upass = '" + pass + "' AND urole = '" + role + "' AND status = 1";
             SqlCommand sc = new SqlCommand(query, connectionString.getConnection());
             SqlDataAdapter sda = new SqlDataAdapter(sc);
             int count = (int) sc.ExecuteScalar();

@@ -53,7 +53,7 @@ namespace FIR_Management_System
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Welcome wel = new Welcome();
-            this.Close();
+            this.Hide();
             wel.ShowDialog();
         }
 

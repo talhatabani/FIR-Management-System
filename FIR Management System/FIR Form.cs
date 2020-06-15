@@ -34,10 +34,6 @@ namespace FIR_Management_System
 
         private void FIR_Form_Load(object sender, EventArgs e)
         {
-            suspect.SelectedIndex = 0;
-            witness.SelectedIndex = 0;
-            weapon.SelectedIndex = 0;
-            town.SelectedIndex = 0;
 
             roleLab.Text = role.ToString();
 
@@ -442,6 +438,25 @@ namespace FIR_Management_System
         private void FIR_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void backbtn_Click(object sender, EventArgs e)
+        {
+            if (controlText.Text.Equals("Citizen FIR's"))
+            {
+                dashboard dp = new dashboard();
+                this.Hide();
+                dp.ShowDialog();
+                this.Close();
+            }
+
+            else
+            {
+                dashboardPolice dp = new dashboardPolice();
+                this.Hide();
+                dp.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

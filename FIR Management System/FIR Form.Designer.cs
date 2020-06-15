@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FIR_Form));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lostItems = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -81,10 +82,12 @@
             this.controlText = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.backbtn = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backbtn)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -117,7 +120,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(4, 90);
+            this.groupBox1.Location = new System.Drawing.Point(4, 111);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -270,7 +273,7 @@
             this.town.Items.AddRange(new object[] {
             "Gulshan",
             "Gulistan e Johar ",
-            "Liary",
+            "Lyari",
             "Saddar",
             "New Town",
             "Bahria Town",
@@ -439,11 +442,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(365, 22);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(365, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(272, 51);
+            this.label1.Size = new System.Drawing.Size(275, 58);
             this.label1.TabIndex = 3;
             this.label1.Text = "FIR FORM";
             // 
@@ -459,7 +463,7 @@
             this.groupBox2.Controls.Add(this.suspect);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(15, 612);
+            this.groupBox2.Location = new System.Drawing.Point(15, 633);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -696,7 +700,7 @@
             this.submitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.submitBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitBtn.ForeColor = System.Drawing.Color.Bisque;
-            this.submitBtn.Location = new System.Drawing.Point(345, 868);
+            this.submitBtn.Location = new System.Drawing.Point(345, 889);
             this.submitBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(280, 59);
@@ -725,7 +729,7 @@
             this.completeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.completeBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.completeBtn.ForeColor = System.Drawing.Color.White;
-            this.completeBtn.Location = new System.Drawing.Point(668, 868);
+            this.completeBtn.Location = new System.Drawing.Point(668, 889);
             this.completeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.completeBtn.Name = "completeBtn";
             this.completeBtn.Size = new System.Drawing.Size(152, 59);
@@ -753,7 +757,7 @@
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteBtn.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(142, 868);
+            this.deleteBtn.Location = new System.Drawing.Point(142, 889);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(152, 59);
@@ -767,6 +771,18 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // backbtn
+            // 
+            this.backbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backbtn.Image = ((System.Drawing.Image)(resources.GetObject("backbtn.Image")));
+            this.backbtn.Location = new System.Drawing.Point(33, 0);
+            this.backbtn.Name = "backbtn";
+            this.backbtn.Size = new System.Drawing.Size(110, 107);
+            this.backbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backbtn.TabIndex = 30;
+            this.backbtn.TabStop = false;
+            this.backbtn.Click += new System.EventHandler(this.backbtn_Click);
+            // 
             // FIR_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -775,6 +791,7 @@
             this.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(989, 758);
+            this.Controls.Add(this.backbtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.controlText);
             this.Controls.Add(this.completeBtn);
@@ -795,6 +812,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.backbtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -851,8 +869,9 @@
         public System.Windows.Forms.TextBox witnessAddress;
         private System.Windows.Forms.Label roleLab;
         public System.Windows.Forms.Button completeBtn;
-        private System.Windows.Forms.Label controlText;
         public System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.PictureBox backbtn;
+        public System.Windows.Forms.Label controlText;
     }
 }
